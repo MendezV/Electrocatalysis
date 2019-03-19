@@ -1,0 +1,27 @@
+#Save the following to common.in:
+lattice Hexagonal 5.23966 36
+ion Pt  0.333333 -0.333333 -0.237676   1
+ion Pt -0.333333  0.333333 -0.118838   1
+ion Pt  0.000000  0.000000  0.000000   1
+ion Pt  0.333333 -0.333333  0.118838   1
+ion Pt -0.333333  0.333333  0.237676   1
+
+ion-species GBRV/$ID_pbesol.uspp
+elec-ex-corr gga-PBEsol
+elec-cutoff 20 100
+
+coulomb-interaction Slab 001
+coulomb-truncation-embed 0 0 0
+
+kpoint-folding 12 12 1
+elec-smearing Fermi 0.01
+
+fluid LinearPCM
+pcm-variant CANDLE
+fluid-solvent H2O
+fluid-cation Na+ 1.
+fluid-anion F- 1.
+
+dump-name common.$VAR      #This will overwrite outputs from successive runs
+initial-state common.$VAR  #This will initialize from the preceding calculation
+dump End State BoundCharge
