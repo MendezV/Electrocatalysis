@@ -1,0 +1,4 @@
+#Save the following to Charged.in:
+include common.in
+electronic-minimize nIterations 200
+target-mu ${mu}
