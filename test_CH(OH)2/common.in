@@ -46,4 +46,4 @@ fluid-anion ClO4- 1.
 
 dump-name common.$VAR      #This will overwrite outputs from successive runs
 initial-state common.$VAR  #This will initialize from the preceding calculation
-dump End State BoundCharge
+dump End State BoundCharge Ecomponents ElecDensity

@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --partition=nodes
-#SBATCH --job-name=pt-C(OH)H
+#SBATCH --job-name=pt-CH(OH)2
 #SBATCH --mem=1
 #SBATCH --output=water_%a.txt
 #SBATCH --array=1-2
@@ -16,4 +16,3 @@ commands[2]="for iMu in {9..10}; do
     mv common.nbound Charged$mu.nbound
 done"
 bash -c "${commands[${SLURM_ARRAY_TASK_ID}]}"
-
