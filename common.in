@@ -19,8 +19,8 @@ elec-smearing Fermi 0.01
 fluid LinearPCM
 pcm-variant CANDLE
 fluid-solvent H2O
-fluid-cation Na+ 1.
-fluid-anion F- 1.
+fluid-cation K+ 1.
+fluid-anion ClO4- 1.
 
 dump-name common.$VAR      #This will overwrite outputs from successive runs
 initial-state common.$VAR  #This will initialize from the preceding calculation
