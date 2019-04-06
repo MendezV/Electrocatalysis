@@ -29,8 +29,10 @@ ion-species GBRV/$ID_pbesol.uspp
 elec-ex-corr gga-PBEsol
 elec-cutoff 20 100
 
+coulomb-truncation-ion-margin 3
 coulomb-interaction Slab 001
 coulomb-truncation-embed 0 0 0
+
 
 kpoint-folding 12 12 1
 elec-smearing Fermi 0.01
