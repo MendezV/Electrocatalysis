@@ -3,7 +3,7 @@ include common.in
 include ${surface}.lattice
 include ${surface}-Vacuum.ionpos
 initial-state ${surface}-Vacuum.$VAR
-dump End None
+dump End Ecomponents ElecDensity EigStats RealSpaceWfns IonicPositions
 
 fluid NonlinearPCM
 pcm-variant GLSSA13

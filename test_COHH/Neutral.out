@@ -739,4 +739,8 @@ SCF: Cycle: 29   F: -1802.748461699783775   dF: +1.699e-08   |Residual|: 1.451e-
 	FillingsUpdate:  mu: -0.187020844  nElectrons: 331.000000
 	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.570952 of unit cell:	Completed after 10 iterations at t[s]: 510119.36
 SCF: Cycle: 30   F: -1802.748461726605228   dF: -2.682e-08   |Residual|: 1.449e-04   |deigs|: 4.131e-05  t[s]: 510129.41
-	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.570936 of unit cell:
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.570936 of unit cell:	Completed after 10 iterations at t[s]: 510137.27
+	FillingsUpdate:  mu: -0.186998972  nElectrons: 331.000000
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.570930 of unit cell:	Completed after 10 iterations at t[s]: 517102.74
+SCF: Cycle: 31   F: -1802.748461719217858   dF: +7.387e-09   |Residual|: 1.432e-04   |deigs|: 2.614e-05  t[s]: 517112.78
+	Linear fluid (dielectric constant: 78.4, screening length: 5.74355 Bohr) occupying 0.570926 of unit cell:

@@ -283,3 +283,75 @@ Real space sums over 225 unit cells with max indices [  7  7  0  ]
 Reciprocal space sums over 81 terms with max indices [  4  4  0  ]
 
 ---------- Allocating electronic variables ----------
+Initializing wave functions:  linear combination of atomic orbitals
+Pt pseudo-atom occupations:   s ( 0 )  p ( 6 0 )  d ( 10 )
+	FillingsUpdate:  mu: -1.649336598  nElectrons: 320.000000
+LCAOMinimize: Iter:   0  F: -1772.1148205095469166  |grad|_K:  2.438e-02  alpha:  1.000e+00
+LCAOMinimize: 	Step increased F by 5.370037e+01, reducing alpha to 1.801931e-02.
+	FillingsUpdate:  mu: -1.092693889  nElectrons: 320.000000
+LCAOMinimize: Iter:   1  F: -1776.9691257290244266  |grad|_K:  1.192e-02  alpha:  1.802e-02  linmin: -3.138e-01  cgtest:  9.044e-01  t[s]:   1186.53
+LCAOMinimize: Encountered beta<0, resetting CG.
+	FillingsUpdate:  mu: -0.509951966  nElectrons: 320.000000
+LCAOMinimize: Iter:   2  F: -1778.4123979520979901  |grad|_K:  5.500e-03  alpha:  3.629e-02  linmin:  4.704e-02  cgtest: -1.215e-01  t[s]:   1487.47
+LCAOMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 1.088622e-01.
+	FillingsUpdate:  mu: -0.173368107  nElectrons: 320.000000
+LCAOMinimize: Iter:   3  F: -1779.7733715711640343  |grad|_K:  2.389e-03  alpha:  1.694e-01  linmin:  2.925e-03  cgtest:  1.886e-01  t[s]:   1865.31
+	FillingsUpdate:  mu: -0.292840472  nElectrons: 320.000000
+LCAOMinimize: Iter:   4  F: -1780.0220980065976164  |grad|_K:  2.319e-03  alpha:  1.499e-01  linmin:  2.239e-03  cgtest: -2.835e-02  t[s]:   2167.09
+	FillingsUpdate:  mu: -0.203249847  nElectrons: 320.000000
+LCAOMinimize: Iter:   5  F: -1780.0928399260028527  |grad|_K:  1.255e-03  alpha:  5.467e-02  linmin:  4.276e-02  cgtest: -2.263e-01  t[s]:   2468.61
+LCAOMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 1.640048e-01.
+	FillingsUpdate:  mu: -0.172851867  nElectrons: 320.000000
+LCAOMinimize: Iter:   6  F: -1780.1961608469766816  |grad|_K:  8.550e-04  alpha:  2.751e-01  linmin:  3.607e-03  cgtest:  7.276e-01  t[s]:   2845.25
+LCAOMinimize: Encountered beta<0, resetting CG.
+	FillingsUpdate:  mu: -0.215436156  nElectrons: 320.000000
+LCAOMinimize: Iter:   7  F: -1780.2050785448964234  |grad|_K:  3.976e-04  alpha:  3.832e-02  linmin: -6.010e-02  cgtest:  1.789e-01  t[s]:   3146.57
+LCAOMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 1.149546e-01.
+	FillingsUpdate:  mu: -0.208898533  nElectrons: 320.000000
+LCAOMinimize: Iter:   8  F: -1780.2114601569298884  |grad|_K:  1.799e-04  alpha:  1.318e-01  linmin: -2.194e-03  cgtest: -1.379e-01  t[s]:   3523.40
+	FillingsUpdate:  mu: -0.226624481  nElectrons: 320.000000
+LCAOMinimize: Iter:   9  F: -1780.2123161472375159  |grad|_K:  1.893e-04  alpha:  9.022e-02  linmin:  9.352e-05  cgtest:  8.726e-03  t[s]:   3825.06
+	FillingsUpdate:  mu: -0.231532314  nElectrons: 320.000000
+LCAOMinimize: Iter:  10  F: -1780.2131921311317910  |grad|_K:  3.852e-05  alpha:  8.417e-02  linmin:  3.846e-03  cgtest:  1.270e-01  t[s]:   4126.36
+	FillingsUpdate:  mu: -0.233794667  nElectrons: 320.000000
+LCAOMinimize: Iter:  11  F: -1780.2132477004481643  |grad|_K:  3.205e-05  alpha:  1.292e-01  linmin:  3.442e-04  cgtest:  7.371e-04  t[s]:   4428.09
+	FillingsUpdate:  mu: -0.232208329  nElectrons: 320.000000
+LCAOMinimize: Iter:  12  F: -1780.2132633136752702  |grad|_K:  2.002e-05  alpha:  5.247e-02  linmin:  2.597e-04  cgtest: -5.969e-04  t[s]:   4729.65
+LCAOMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 1.574058e-01.
+	FillingsUpdate:  mu: -0.231282611  nElectrons: 320.000000
+LCAOMinimize: Iter:  13  F: -1780.2132954528628943  |grad|_K:  6.318e-06  alpha:  2.762e-01  linmin: -3.771e-04  cgtest:  5.664e-03  t[s]:   5106.31
+	FillingsUpdate:  mu: -0.231026968  nElectrons: 320.000000
+LCAOMinimize: Iter:  14  F: -1780.2132973366569786  |grad|_K:  9.079e-06  alpha:  1.624e-01  linmin: -3.430e-06  cgtest: -6.225e-04  t[s]:   5407.93
+	FillingsUpdate:  mu: -0.231683719  nElectrons: 320.000000
+LCAOMinimize: Iter:  15  F: -1780.2132988938928975  |grad|_K:  3.654e-06  alpha:  6.495e-02  linmin: -2.654e-04  cgtest:  4.017e-03  t[s]:   5709.58
+	FillingsUpdate:  mu: -0.231906672  nElectrons: 320.000000
+LCAOMinimize: Iter:  16  F: -1780.2132994939211130  |grad|_K:  1.137e-06  alpha:  1.554e-01  linmin:  3.581e-03  cgtest: -1.809e-02  t[s]:   6010.67
+	FillingsUpdate:  mu: -0.232004706  nElectrons: 320.000000
+LCAOMinimize: Iter:  17  F: -1780.2132995738077170  |grad|_K:  2.253e-06  alpha:  2.128e-01  linmin: -6.941e-04  cgtest:  7.691e-03  t[s]:   6312.01
+LCAOMinimize: Converged (|Delta F|<1.000000e-06 for 2 iters).
+
+
+---- Citations for features of the code used in this run ----
+
+   Software package:
+      R. Sundararaman, K. Letchworth-Weaver, K.A. Schwarz, D. Gunceler, Y. Ozhabes and T.A. Arias, 'JDFTx: software for joint density-functional theory', SoftwareX 6, 278 (2017)
+
+   gga-PBEsol exchange-correlation functional:
+      J.P. Perdew et al., Phys. Rev. Lett. 100, 136406 (2008)
+
+   Pseudopotentials:
+      KF Garrity, JW Bennett, KM Rabe and D Vanderbilt, Comput. Mater. Sci. 81, 446 (2014)
+
+   Truncated Coulomb potentials:
+      R. Sundararaman and T.A. Arias, Phys. Rev. B 87, 165122 (2013)
+
+This list may not be complete. Please suggest additional citations or
+report any other bugs at https://github.com/shankar1729/jdftx/issues
+
+Initialization completed successfully at t[s]:   6531.07
+
+	FillingsUpdate:  mu: -0.232004706  nElectrons: 320.000000
+
+-------- Electronic minimization -----------
+Will mix electronic density at each iteration.
+	FillingsUpdate:  mu: -0.232004706  nElectrons: 320.000000
