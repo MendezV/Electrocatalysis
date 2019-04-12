@@ -29,7 +29,7 @@ ion-species GBRV/$ID_pbesol.uspp
 elec-ex-corr gga-PBEsol
 elec-cutoff 20 100
 
-coulomb-truncation-ion-margin 3
+coulomb-truncation-ion-margin 2
 coulomb-interaction Slab 001
 coulomb-truncation-embed 0 0 0
 
