@@ -1,0 +1,4 @@
+tee: invalid option -- 'V'
+Try 'tee --help' for more information.
+tee: invalid option -- 'S'
+Try 'tee --help' for more information.
