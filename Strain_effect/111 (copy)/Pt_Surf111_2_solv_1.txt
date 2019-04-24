@@ -3,6 +3,7 @@ Initialization of PSM library failed.
 
   Error: PSM is in the finalized state
 --------------------------------------------------------------------------
+[node2009][[20041,1],0][btl_openib.c:880:mca_btl_openib_add_procs] could not prepare openib device for use
 --------------------------------------------------------------------------
 The OpenFabrics (openib) BTL failed to initialize while trying to
 allocate some locked memory.  This typically can indicate that the
@@ -347,3 +348,4 @@ Pt pseudo-atom occupations:   s ( 0 )  p ( 6 0 )  d ( 10 )
 	FillingsUpdate:  mu: -2.729045807  nElectrons: 331.000000
 LCAOMinimize: Iter:   0  F: -1789.5612446099935369  |grad|_K:  2.692e-02  alpha:  1.000e+00
 LCAOMinimize: 	Step increased F by 4.621353e+02, reducing alpha to 1.196486e-02.
+slurmstepd: error: *** JOB 85314 ON node2009 CANCELLED AT 2019-04-24T10:16:03 ***

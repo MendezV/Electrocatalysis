@@ -11,3 +11,5 @@ pcm-variant GLSSA13
 fluid-solvent H2O
 fluid-cation Na+ 0.2
 fluid-anion ClO4- 0.2
+
+target-mu -0.1736

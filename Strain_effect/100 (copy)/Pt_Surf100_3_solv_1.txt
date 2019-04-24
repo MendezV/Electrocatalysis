@@ -3,6 +3,7 @@ Initialization of PSM library failed.
 
   Error: PSM is in the finalized state
 --------------------------------------------------------------------------
+[node2004][[22355,1],0][btl_openib.c:880:mca_btl_openib_add_procs] could not prepare openib device for use
 --------------------------------------------------------------------------
 The OpenFabrics (openib) BTL failed to initialize while trying to
 allocate some locked memory.  This typically can indicate that the
@@ -10,7 +11,7 @@ memlock limits are set too low.  For most HPC installations, the
 memlock limits should be set to "unlimited".  The failure occured
 here:
 
-  Local host:    node2009
+  Local host:    node2004
   OMPI source:   btl_openib.c:753
   Function:      ompi_free_list_init_ex_new()
   Device:        qib0
@@ -25,9 +26,9 @@ helpful:
 
 *************** JDFTx 1.4.2 (git hash 74b6e54) ***************
 
-Start date and time: Wed Apr 24 10:05:24 2019
+Start date and time: Wed Apr 24 10:20:07 2019
 Executable /home/jfm343/JDFTXDIR/build/jdftx with command-line: -i Vacuum.in
-Running on hosts (process indices):  node2009.physics.cornell.edu (0)
+Running on hosts (process indices):  node2004.physics.cornell.edu (0)
 Divided in process groups (process indices):  0 (0)
 Resource initialization completed at t[s]:      0.00
 Run totals: 1 processes, 12 threads, 0 GPUs
@@ -42,7 +43,7 @@ coulomb-interaction Slab 001
 coulomb-truncation-embed 0 0 0
 davidson-band-ratio 1.1
 dump End State IonicPositions ElecDensity EigStats Ecomponents
-dump-name 111_2-Vacuum.$VAR
+dump-name 100_3-Vacuum.$VAR
 elec-cutoff 20 100
 elec-eigen-algo Davidson
 elec-ex-corr gga-PBEsol
@@ -111,29 +112,28 @@ fluid-solvent H2O 55.338 ScalarEOS \
 	omegaEl 0.55124 \
 	gammaEl 0.257245
 forces-output-coords Positions
-ion O   0.292000000000000   0.444000000000000   0.311000000000000 1
-ion C   0.500000000000000   0.500000000000000   0.282000000000000 1
-ion H   0.700000000000000   0.554000000000000   0.303000000000000 1
-ion Pt   0.333300000000000   0.166700000000000  -0.200100000000000 0
-ion Pt   0.333300000000000   0.666700000000000  -0.200100000000000 0
-ion Pt   0.833300000000000   0.166700000000000  -0.200100000000000 0
-ion Pt   0.833300000000000   0.666700000000000  -0.200100000000000 0
-ion Pt   0.000000000000000   0.000000000000000  -0.100000000000000 0
-ion Pt   0.000000000000000   0.500000000000000  -0.100000000000000 0
-ion Pt   0.500000000000000   0.000000000000000  -0.100000000000000 0
-ion Pt   0.500000000000000   0.500000000000000  -0.100000000000000 0
-ion Pt   0.166700000000000   0.333300000000000   0.000000000000000 1
-ion Pt   0.166700000000000   0.833300000000000   0.000000000000000 1
-ion Pt   0.666700000000000   0.333300000000000   0.000000000000000 1
-ion Pt   0.666700000000000   0.833300000000000   0.000000000000000 1
-ion Pt   0.333300000000000   0.166700000000000   0.100000000000000 1
-ion Pt   0.333300000000000   0.666700000000000   0.100000000000000 1
-ion Pt   0.833300000000000   0.166700000000000   0.100000000000000 1
-ion Pt   0.833300000000000   0.666700000000000   0.100000000000000 1
-ion Pt   0.000000000000000   0.000000000000000   0.200100000000000 1
-ion Pt   0.000000000000000   0.500000000000000   0.200100000000000 1
-ion Pt   0.500000000000000   0.000000000000000   0.200100000000000 1
-ion Pt   0.500000000000000   0.500000000000000   0.200100000000000 1
+ion O   0.500000000000000   0.500000000000000   0.293619000000000 1
+ion C   0.500000000000000   0.500000000000000   0.246000000000000 1
+ion Pt   0.000000000000000   0.000000000000000  -0.166700000000000 0
+ion Pt   0.500000000000000   0.500000000000000  -0.166700000000000 0
+ion Pt   0.000000000000000   0.500000000000000  -0.166700000000000 0
+ion Pt   0.500000000000000   0.000000000000000  -0.166700000000000 0
+ion Pt   0.750000000000000   0.250000000000000  -0.083300000000000 0
+ion Pt   0.250000000000000   0.750000000000000  -0.083300000000000 0
+ion Pt   0.250000000000000   0.250000000000000  -0.083300000000000 0
+ion Pt   0.750000000000000   0.750000000000000  -0.083300000000000 0
+ion Pt   0.500000000000000   0.000000000000000   0.000000000000000 1
+ion Pt   0.000000000000000   0.000000000000000   0.000000000000000 1
+ion Pt   0.000000000000000   0.500000000000000   0.000000000000000 1
+ion Pt   0.500000000000000   0.500000000000000   0.000000000000000 1
+ion Pt   0.750000000000000   0.250000000000000   0.083300000000000 1
+ion Pt   0.250000000000000   0.750000000000000   0.083300000000000 1
+ion Pt   0.250000000000000   0.250000000000000   0.083300000000000 1
+ion Pt   0.750000000000000   0.750000000000000   0.083300000000000 1
+ion Pt   0.000000000000000   0.000000000000000   0.166700000000000 1
+ion Pt   0.000000000000000   0.500000000000000   0.166700000000000 1
+ion Pt   0.500000000000000   0.000000000000000   0.166700000000000 1
+ion Pt   0.500000000000000   0.500000000000000   0.166700000000000 1
 ion-species GBRV/$ID_pbesol.uspp
 ion-width 0
 ionic-minimize  \
@@ -154,10 +154,10 @@ ionic-minimize  \
 	wolfeGradient        0.9 \
 	fdTest               no
 kpoint   0.000000000000   0.000000000000   0.000000000000  1.00000000000000
-kpoint-folding 6 6 1 
+kpoint-folding 4 4 1 
 latt-move-scale 1 1 1
 latt-scale 1 1 1 
-lattice Hexagonal 10.4793 42.7686
+lattice Tetragonal 10.4793 44.446
 lattice-minimize  \
 	dirUpdateScheme      L-BFGS \
 	linminMethod         DirUpdateRecommended \
@@ -186,34 +186,34 @@ symmetry-threshold 0.0001
 
 ---------- Setting up symmetries ----------
 
-Found 24 point-group symmetries of the bravais lattice
-Found 1 space-group symmetries with basis
+Found 16 point-group symmetries of the bravais lattice
+Found 8 space-group symmetries with basis
 Applied RMS atom displacement 0 bohrs to make symmetries exact.
 
 ---------- Initializing the Grid ----------
 R = 
-[    10.4793   -5.23966          0  ]
-[          0    9.07536          0  ]
-[          0          0    42.7686  ]
-unit cell volume = 4067.45
+[    10.4793          0          0  ]
+[          0    10.4793          0  ]
+[          0          0     44.446  ]
+unit cell volume = 4880.87
 G =
-[   0.599579   0.346167         -0  ]
-[          0   0.692335          0  ]
-[          0         -0   0.146911  ]
-Minimum fftbox size, Smin = [  48  48  196  ]
-Chosen fftbox size, S = [  48  48  196  ]
+[   0.599581          0          0  ]
+[          0   0.599581          0  ]
+[          0          0   0.141367  ]
+Minimum fftbox size, Smin = [  48  48  204  ]
+Chosen fftbox size, S = [  48  48  210  ]
 
 ---------- Initializing tighter grid for wavefunction operations ----------
 R = 
-[    10.4793   -5.23966          0  ]
-[          0    9.07536          0  ]
-[          0          0    42.7686  ]
-unit cell volume = 4067.45
+[    10.4793          0          0  ]
+[          0    10.4793          0  ]
+[          0          0     44.446  ]
+unit cell volume = 4880.87
 G =
-[   0.599579   0.346167         -0  ]
-[          0   0.692335          0  ]
-[          0         -0   0.146911  ]
-Minimum fftbox size, Smin = [  44  44  176  ]
+[   0.599581          0          0  ]
+[          0   0.599581          0  ]
+[          0          0   0.141367  ]
+Minimum fftbox size, Smin = [  44  44  180  ]
 Chosen fftbox size, S = [  48  48  180  ]
 
 ---------- Exchange Correlation functional ----------
@@ -236,10 +236,10 @@ Reading pseudopotential file '/home/jfm343/JDFTXDIR/build/pseudopotentials/GBRV/
     l: 1  eig: 0.000000  rCut: 1.25
     l: 2  eig: 1.000000  rCut: 1.25
   Partial core density with radius 0.7
-  Transforming core density to a uniform radial grid of dG=0.02 with 1615 points.
-  Transforming local potential to a uniform radial grid of dG=0.02 with 1615 points.
+  Transforming core density to a uniform radial grid of dG=0.02 with 1265 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1265 points.
   Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
-  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1615 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1265 points.
   Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
   Core radius for overlap checks: 1.25 bohrs.
 
@@ -255,26 +255,12 @@ Reading pseudopotential file '/home/jfm343/JDFTXDIR/build/pseudopotentials/GBRV/
     l: 1  eig: -0.192448  rCut: 1.3
     l: 1  eig: 0.000000  rCut: 1.3
   Partial core density with radius 1.1
-  Transforming core density to a uniform radial grid of dG=0.02 with 1615 points.
-  Transforming local potential to a uniform radial grid of dG=0.02 with 1615 points.
+  Transforming core density to a uniform radial grid of dG=0.02 with 1265 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1265 points.
   Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
-  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1615 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1265 points.
   Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
   Core radius for overlap checks: 1.30 bohrs.
-
-Reading pseudopotential file '/home/jfm343/JDFTXDIR/build/pseudopotentials/GBRV/h_pbesol.uspp':
-  Title: H.  Created by USPP 7.3.6 on 22-9-15
-  Reference state energy: -0.449841.  1 valence electrons in orbitals:
-    |100>  occupation: 1  eigenvalue: -0.232690
-  lMax: 0  lLocal: 1  QijEcut: 6
-  2 projectors sampled on a log grid with 395 points:
-    l: 0  eig: -0.232690  rCut: 1.2
-    l: 0  eig: 1.000000  rCut: 1.2
-  Transforming local potential to a uniform radial grid of dG=0.02 with 1615 points.
-  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
-  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1615 points.
-  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
-  Core radius for overlap checks: 1.20 bohrs.
 
 Reading pseudopotential file '/home/jfm343/JDFTXDIR/build/pseudopotentials/GBRV/pt_pbesol.uspp':
   Title: Pt.  Created by USPP 7.3.6 on 22-9-15
@@ -292,58 +278,50 @@ Reading pseudopotential file '/home/jfm343/JDFTXDIR/build/pseudopotentials/GBRV/
     l: 2  eig: -0.500000  rCut: 1.6
     l: 2  eig: -0.336311  rCut: 1.6
   Partial core density with radius 1.1
-  Transforming core density to a uniform radial grid of dG=0.02 with 1615 points.
-  Transforming local potential to a uniform radial grid of dG=0.02 with 1615 points.
+  Transforming core density to a uniform radial grid of dG=0.02 with 1265 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1265 points.
   Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
-  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1615 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1265 points.
   Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
   Core radius for overlap checks: 2.45 bohrs.
 
-Initialized 4 species with 23 total atoms.
+Initialized 3 species with 22 total atoms.
 
-Folded 1 k-points by 6x6x1 to 36 k-points.
+Folded 1 k-points by 4x4x1 to 16 k-points.
 
 ---------- Setting up k-points, bands, fillings ----------
-Adding inversion symmetry to k-mesh for non-inversion-symmetric unit cell.
-Reduced to 20 k-points under symmetry. 
+Reduced to 6 k-points under symmetry. 
 Computing the number of bands and number of electrons
 Calculating initial fillings.
-nElectrons: 331.000000   nBands: 249   nStates: 20
+nElectrons: 330.000000   nBands: 248   nStates: 6
 
 ----- Setting up reduced wavefunction bases (one per k-point) -----
-average nbasis = 17378.583 , ideal nbasis = 17376.449
+average nbasis = 20861.812 , ideal nbasis = 20851.448
 
 ---------- Setting up coulomb interaction ----------
 Setting up double-sized grid for truncated Coulomb potentials:
 R = 
-[    10.4793   -5.23966          0  ]
-[          0    9.07536          0  ]
-[          0          0    85.5372  ]
-unit cell volume = 8134.9
+[    10.4793          0          0  ]
+[          0    10.4793          0  ]
+[          0          0     88.892  ]
+unit cell volume = 9761.74
 G =
-[   0.599579   0.346167         -0  ]
-[          0   0.692335          0  ]
-[          0         -0  0.0734556  ]
-Chosen fftbox size, S = [  48  48  392  ]
+[   0.599581          0          0  ]
+[          0   0.599581          0  ]
+[          0          0  0.0706834  ]
+Chosen fftbox size, S = [  48  48  420  ]
 Integer grid location selected as the embedding center:
    Grid: [  0  0  0  ]
    Lattice: [  0  0  0  ]
    Cartesian: [  0  0  0  ]
-Constructing Wigner-Seitz cell: 8 faces (6 quadrilaterals, 2 hexagons)
+Constructing Wigner-Seitz cell: 6 faces (6 quadrilaterals, 0 hexagons)
 Range-separation parameter for embedded mesh potentials due to point charges: 0.589462 bohrs.
 Initialized slab truncation along lattice direction 001
 
 ---------- Setting up 2D ewald sum ----------
-Optimum gaussian width for ewald sums = 5.817695 bohr.
-Real space sums over 289 unit cells with max indices [  8  8  0  ]
+Optimum gaussian width for ewald sums = 6.251509 bohr.
+Real space sums over 225 unit cells with max indices [  7  7  0  ]
 Reciprocal space sums over 81 terms with max indices [  4  4  0  ]
 
 ---------- Allocating electronic variables ----------
-Initializing wave functions:  linear combination of atomic orbitals
-O pseudo-atom occupations:   s ( 2 )  p ( 4 )
-C pseudo-atom occupations:   s ( 2 )  p ( 2 )
-H pseudo-atom occupations:   s ( 1 )
-Pt pseudo-atom occupations:   s ( 0 )  p ( 6 0 )  d ( 10 )
-	FillingsUpdate:  mu: -2.729045807  nElectrons: 331.000000
-LCAOMinimize: Iter:   0  F: -1789.5612446099935369  |grad|_K:  2.692e-02  alpha:  1.000e+00
-LCAOMinimize: 	Step increased F by 4.621353e+02, reducing alpha to 1.196486e-02.
+slurmstepd: error: *** JOB 85331 ON node2004 CANCELLED AT 2019-04-24T10:20:15 ***

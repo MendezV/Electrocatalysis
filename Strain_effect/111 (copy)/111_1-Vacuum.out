@@ -342,3 +342,10 @@ Real space sums over 289 unit cells with max indices [  8  8  0  ]
 Reciprocal space sums over 81 terms with max indices [  4  4  0  ]
 
 ---------- Allocating electronic variables ----------
+Initializing wave functions:  linear combination of atomic orbitals
+O pseudo-atom occupations:   s ( 2 )  p ( 4 )
+C pseudo-atom occupations:   s ( 2 )  p ( 2 )
+H pseudo-atom occupations:   s ( 1 )
+Pt pseudo-atom occupations:   s ( 0 )  p ( 6 0 )  d ( 10 )
+	FillingsUpdate:  mu: -2.233713983  nElectrons: 339.000000
+LCAOMinimize: Iter:   0  F: -1809.6069488555485805  |grad|_K:  2.079e-02  alpha:  1.000e+00
