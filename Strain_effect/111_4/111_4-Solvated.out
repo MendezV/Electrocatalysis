@@ -1,0 +1,1211 @@
+--------------------------------------------------------------------------
+Initialization of PSM library failed.
+
+  Error: PSM is in the finalized state
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+The OpenFabrics (openib) BTL failed to initialize while trying to
+allocate some locked memory.  This typically can indicate that the
+memlock limits are set too low.  For most HPC installations, the
+memlock limits should be set to "unlimited".  The failure occured
+here:
+
+  Local host:    node2003
+  OMPI source:   btl_openib.c:753
+  Function:      ompi_free_list_init_ex_new()
+  Device:        qib0
+  Memlock limit: 65536
+
+You may need to consult with your system administrator to get this
+problem fixed.  This FAQ entry on the Open MPI web site may also be
+helpful:
+
+    http://www.open-mpi.org/faq/?category=openfabrics#ib-locked-pages
+--------------------------------------------------------------------------
+
+*************** JDFTx 1.4.2 (git hash 74b6e54) ***************
+
+Start date and time: Sun Apr 28 23:29:28 2019
+Executable /home/jfm343/JDFTXDIR/build/jdftx with command-line: -i Solvated.in
+Running on hosts (process indices):  node2003.physics.cornell.edu (0)
+Divided in process groups (process indices):  0 (0)
+Resource initialization completed at t[s]:      0.00
+Run totals: 1 processes, 12 threads, 0 GPUs
+
+
+Input parsed successfully to the following command list (including defaults):
+
+basis kpoint-dependent
+coords-type Lattice
+core-overlap-check vector
+coulomb-interaction Slab 001
+coulomb-truncation-embed 0 0 0
+davidson-band-ratio 1.1
+dump End IonicPositions ElecDensity EigStats Ecomponents
+dump-name 111_4-Solvated.$VAR
+elec-cutoff 20 100
+elec-eigen-algo Davidson
+elec-ex-corr gga-PBEsol
+elec-smearing Fermi 0.01
+electronic-minimize  \
+	dirUpdateScheme      FletcherReeves \
+	linminMethod         DirUpdateRecommended \
+	nIterations          200 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-08 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+exchange-regularization WignerSeitzTruncated
+fluid NonlinearPCM 298.000000 1.013250
+fluid-anion ClO4- 0.2 MeanFieldLJ \
+	epsBulk 1 \
+	pMol 0 \
+	epsInf 1 \
+	Pvap 0 \
+	sigmaBulk 0 \
+	Rvdw 4.55424 \
+	Res 0 \
+	tauNuc 343133 \
+	omegaEl 0.55124 \
+	gammaEl 0.257245
+fluid-cation Na+ 0.2 MeanFieldLJ \
+	epsBulk 1 \
+	pMol 0 \
+	epsInf 1 \
+	Pvap 0 \
+	sigmaBulk 0 \
+	Rvdw 2.19208 \
+	Res 0 \
+	tauNuc 343133 \
+	omegaEl 0.55124 \
+	gammaEl 0.257245
+fluid-ex-corr lda-TF lda-PZ
+fluid-gummel-loop 10 1.000000e-05
+fluid-minimize  \
+	dirUpdateScheme      PolakRibiere \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       1e-11 \
+	energyDiffThreshold  0 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      6 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+fluid-solvent H2O 55.338 ScalarEOS \
+	epsBulk 78.4 \
+	pMol 0.92466 \
+	epsInf 1.77 \
+	Pvap 1.06736e-10 \
+	sigmaBulk 4.62e-05 \
+	Rvdw 2.61727 \
+	Res 1.42 \
+	tauNuc 343133 \
+	omegaEl 0.55124 \
+	gammaEl 0.257245
+forces-output-coords Positions
+initial-state 111_4-Vacuum.$VAR
+ion H   0.645688104109028   0.426427872801373   0.361946502149445 1
+ion H   0.492314149636896   0.840258336581769   0.361848824526299 1
+ion C   0.496824815700156   0.505975453463636   0.361919391513210 1
+ion O   0.245331594219677   0.361671317935350   0.362026348898080 1
+ion O   0.636927202392744   0.784646723619025   0.362116318251793 1
+ion Pt   0.333300000000000   0.166700000000000  -0.200100000000000 0
+ion Pt   0.333300000000000   0.666700000000000  -0.200100000000000 0
+ion Pt   0.833300000000000   0.166700000000000  -0.200100000000000 0
+ion Pt   0.833300000000000   0.666700000000000  -0.200100000000000 0
+ion Pt   0.000000000000000   0.000000000000000  -0.100000000000000 0
+ion Pt   0.000000000000000   0.500000000000000  -0.100000000000000 0
+ion Pt   0.500000000000000   0.000000000000000  -0.100000000000000 0
+ion Pt   0.500000000000000   0.500000000000000  -0.100000000000000 0
+ion Pt   0.166690907254758   0.333314827839511  -0.000083338305943 1
+ion Pt   0.166676077589475   0.833307928560103  -0.000084259630764 1
+ion Pt   0.666683477531807   0.333310481213499  -0.000047595980689 1
+ion Pt   0.666688160658059   0.833308254653238  -0.000064198802396 1
+ion Pt   0.333239430340588   0.166639394579248   0.099700805003771 1
+ion Pt   0.333287599594543   0.666661899839421   0.099697957765128 1
+ion Pt   0.833355429486937   0.166682826661436   0.099712912733230 1
+ion Pt   0.833344642812937   0.666714746804804   0.099712897356142 1
+ion Pt  -0.000002779942238   0.000052665501463   0.200143677143037 1
+ion Pt   0.000044869774352   0.499983932662140   0.200105444043616 1
+ion Pt   0.499990702335293  -0.000022653201989   0.200075215810662 1
+ion Pt   0.499957241324349   0.499981142118577   0.200092499305137 1
+ion-species GBRV/$ID_pbesol.uspp
+ion-width Ecut
+ionic-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0.0001 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+kpoint   0.000000000000   0.000000000000   0.000000000000  1.00000000000000
+kpoint-folding 4 4 1 
+latt-move-scale 1 1 1
+latt-scale 1 1 1 
+lattice Hexagonal 10.4793 42.7686
+lattice-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+lcao-params -1 1e-06 0.01
+pcm-variant GLSSA13
+spintype no-spin
+subspace-rotation-factor 1 yes
+symmetries automatic
+symmetry-threshold 0.0001
+target-mu -0.1736 no
+
+
+
+
+---------- Setting up symmetries ----------
+
+Found 24 point-group symmetries of the bravais lattice
+Found 1 space-group symmetries with basis
+Applied RMS atom displacement 0 bohrs to make symmetries exact.
+
+---------- Initializing the Grid ----------
+R = 
+[    10.4793   -5.23966          0  ]
+[          0    9.07536          0  ]
+[          0          0    42.7686  ]
+unit cell volume = 4067.45
+G =
+[   0.599579   0.346167         -0  ]
+[          0   0.692335          0  ]
+[          0         -0   0.146911  ]
+Minimum fftbox size, Smin = [  48  48  196  ]
+Chosen fftbox size, S = [  48  48  196  ]
+
+---------- Initializing tighter grid for wavefunction operations ----------
+R = 
+[    10.4793   -5.23966          0  ]
+[          0    9.07536          0  ]
+[          0          0    42.7686  ]
+unit cell volume = 4067.45
+G =
+[   0.599579   0.346167         -0  ]
+[          0   0.692335          0  ]
+[          0         -0   0.146911  ]
+Minimum fftbox size, Smin = [  44  44  176  ]
+Chosen fftbox size, S = [  48  48  180  ]
+
+---------- Exchange Correlation functional ----------
+Initalized PBEsol GGA exchange.
+Initalized PBEsol GGA correlation.
+
+---------- Setting up pseudopotentials ----------
+Width of ionic core gaussian charges (only for fluid interactions / plotting) set to 0.397384
+
+Reading pseudopotential file '/home/jfm343/JDFTXDIR/build/pseudopotentials/GBRV/h_pbesol.uspp':
+  Title: H.  Created by USPP 7.3.6 on 22-9-15
+  Reference state energy: -0.449841.  1 valence electrons in orbitals:
+    |100>  occupation: 1  eigenvalue: -0.232690
+  lMax: 0  lLocal: 1  QijEcut: 6
+  2 projectors sampled on a log grid with 395 points:
+    l: 0  eig: -0.232690  rCut: 1.2
+    l: 0  eig: 1.000000  rCut: 1.2
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1615 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1615 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 1.20 bohrs.
+
+Reading pseudopotential file '/home/jfm343/JDFTXDIR/build/pseudopotentials/GBRV/c_pbesol.uspp':
+  Title: C.  Created by USPP 7.3.6 on 3-2-2014
+  Reference state energy: -5.383511.  4 valence electrons in orbitals:
+    |200>  occupation: 2  eigenvalue: -0.501126
+    |210>  occupation: 2  eigenvalue: -0.192448
+  lMax: 1  lLocal: 2  QijEcut: 5
+  4 projectors sampled on a log grid with 503 points:
+    l: 0  eig: -0.501126  rCut: 1.3
+    l: 0  eig: 0.000000  rCut: 1.3
+    l: 1  eig: -0.192448  rCut: 1.3
+    l: 1  eig: 0.000000  rCut: 1.3
+  Partial core density with radius 1.1
+  Transforming core density to a uniform radial grid of dG=0.02 with 1615 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1615 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1615 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 1.30 bohrs.
+
+Reading pseudopotential file '/home/jfm343/JDFTXDIR/build/pseudopotentials/GBRV/o_pbesol.uspp':
+  Title: O.  Created by USPP 7.3.6 on 3-2-2014
+  Reference state energy: -15.849885.  6 valence electrons in orbitals:
+    |200>  occupation: 2  eigenvalue: -0.873214
+    |210>  occupation: 4  eigenvalue: -0.330058
+  lMax: 2  lLocal: 2  QijEcut: 6
+  5 projectors sampled on a log grid with 511 points:
+    l: 0  eig: -0.873214  rCut: 1.25
+    l: 0  eig: 0.000000  rCut: 1.25
+    l: 1  eig: -0.330058  rCut: 1.25
+    l: 1  eig: 0.000000  rCut: 1.25
+    l: 2  eig: 1.000000  rCut: 1.25
+  Partial core density with radius 0.7
+  Transforming core density to a uniform radial grid of dG=0.02 with 1615 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1615 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1615 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 1.25 bohrs.
+
+Reading pseudopotential file '/home/jfm343/JDFTXDIR/build/pseudopotentials/GBRV/pt_pbesol.uspp':
+  Title: Pt.  Created by USPP 7.3.6 on 22-9-15
+  Reference state energy: -104.899005.  16 valence electrons in orbitals:
+    |510>  occupation: 6  eigenvalue: -2.158847
+    |520>  occupation: 9.5  eigenvalue: -0.336311
+    |600>  occupation: 0  eigenvalue: -0.320324
+    |610>  occupation: 0  eigenvalue: -0.119800
+  lMax: 2  lLocal: 3  QijEcut: 5.5
+  6 projectors sampled on a log grid with 745 points:
+    l: 0  eig: -0.320324  rCut: 2.45
+    l: 0  eig: 1.500000  rCut: 2.45
+    l: 1  eig: -2.158847  rCut: 1.6
+    l: 1  eig: -0.119800  rCut: 1.6
+    l: 2  eig: -0.500000  rCut: 1.6
+    l: 2  eig: -0.336311  rCut: 1.6
+  Partial core density with radius 1.1
+  Transforming core density to a uniform radial grid of dG=0.02 with 1615 points.
+  Transforming local potential to a uniform radial grid of dG=0.02 with 1615 points.
+  Transforming nonlocal projectors to a uniform radial grid of dG=0.02 with 432 points.
+  Transforming density augmentations to a uniform radial grid of dG=0.02 with 1615 points.
+  Transforming atomic orbitals to a uniform radial grid of dG=0.02 with 432 points.
+  Core radius for overlap checks: 2.45 bohrs.
+
+Initialized 4 species with 25 total atoms.
+
+Folded 1 k-points by 4x4x1 to 16 k-points.
+
+---------- Setting up k-points, bands, fillings ----------
+Adding inversion symmetry to k-mesh for non-inversion-symmetric unit cell.
+Reduced to 10 k-points under symmetry. 
+Computing the number of bands and number of electrons
+Reading initial fillings from file 111_4-Vacuum.fillings.
+nElectrons: 338.000000   nBands: 254   nStates: 10
+
+----- Setting up reduced wavefunction bases (one per k-point) -----
+average nbasis = 17373.562 , ideal nbasis = 17376.449
+
+---------- Setting up coulomb interaction ----------
+Fluid mode embedding: using embedded box, but periodic Coulomb kernel.
+(Fluid response is responsible for (approximate) separation between periodic images.)
+Setting up double-sized grid for truncated Coulomb potentials:
+R = 
+[    10.4793   -5.23966          0  ]
+[          0    9.07536          0  ]
+[          0          0    85.5372  ]
+unit cell volume = 8134.9
+G =
+[   0.599579   0.346167         -0  ]
+[          0   0.692335          0  ]
+[          0         -0  0.0734556  ]
+Chosen fftbox size, S = [  48  48  392  ]
+Integer grid location selected as the embedding center:
+   Grid: [  0  0  0  ]
+   Lattice: [  0  0  0  ]
+   Cartesian: [  0  0  0  ]
+Constructing Wigner-Seitz cell: 8 faces (6 quadrilaterals, 2 hexagons)
+Range-separation parameter for embedded mesh potentials due to point charges: 0.589462 bohrs.
+
+---------- Setting up ewald sum ----------
+Optimum gaussian width for ewald sums = 4.692138 bohr.
+Real space sum over 845 unit cells with max indices [  6  6  2  ]
+Reciprocal space sum over 7139 terms with max indices [  5  5  29  ]
+
+---------- Allocating electronic variables ----------
+Initializing wave functions:  reading from '111_4-Vacuum.wfns'
+----- createFluidSolver() ----- (Fluid-side solver setup)
+   Initializing fluid molecule 'H2O'
+     Initializing site 'O'
+       Electron density: proportional to exp(-r/0.36935)*erfc((r-0.51523)/0.36823) with norm 6.826
+       Charge density: gaussian nuclear width 0.478731 with net site charge 0.826
+       Polarizability: cuspless exponential with width 0.32 and norm 3.73
+       Hard sphere radius: 2.57003 bohrs
+       Positions in reference frame:
+         [ +0.000000 +0.000000 +0.000000 ]
+     Initializing site 'H'
+       Electron density: proportional to exp(-r/0.34641)*erfc((r-0)/0.390882) with norm 0.587
+       Charge density: gaussian nuclear width 0.377945 with net site charge -0.413
+       Polarizability: cuspless exponential with width 0.39 and norm 3.3
+       Positions in reference frame:
+         [ +0.000000 -1.441945 +1.122523 ]
+         [ +0.000000 +1.441945 +1.122523 ]
+     Net charge: 0   dipole magnitude: 0.927204
+     Initializing spherical shell mfKernel with radius 2.61727 Bohr
+     deltaS corrections:
+       site 'O': -7.54299
+       site 'H': -6.83917
+   Initializing fluid molecule 'Na+'
+     Initializing site 'Na'
+       Electron density: proportional to exp(-r/0.19682)*erfc((r-0.71491)/0.41314) with norm 8.1383
+       Charge density: gaussian nuclear width 0.365347 with net site charge -1
+       Hard sphere radius: 1.86327 bohrs
+       Positions in reference frame:
+         [ +0.000000 +0.000000 +0.000000 ]
+     Net charge: -1   dipole magnitude: 0
+     Initializing gaussian mfKernel with width: 1.55004 Bohr
+     deltaS corrections:
+       site 'Na': -22.3555
+   Initializing fluid molecule 'ClO4-'
+     Initializing site 'Cl'
+       Electron density: proportional to exp(-r/0.48793)*erfc((r-0.93371)/0.45657) with norm 6.2308
+       Charge density: gaussian nuclear width 0.55117 with net site charge -0.7692
+       Hard sphere radius: 4.42196 bohrs
+       Positions in reference frame:
+         [ +0.000000 +0.000000 +0.000000 ]
+     Initializing site 'O'
+       Electron density: proportional to exp(-r/0.36013)*erfc((r-0.51636)/0.37371) with norm 6.4423
+       Charge density: gaussian nuclear width 0.478731 with net site charge 0.4423
+       Positions in reference frame:
+         [ +1.705286 +1.705286 +1.705286 ]
+         [ +1.705286 -1.705286 -1.705286 ]
+         [ -1.705286 +1.705286 -1.705286 ]
+         [ -1.705286 -1.705286 +1.705286 ]
+     Net charge: 1   dipole magnitude: 0
+     Initializing gaussian mfKernel with width: 3.22033 Bohr
+     deltaS corrections:
+       site 'Cl': -87.0374
+       site 'O': 12.0842
+
+Correction to mu due to finite nuclear width = -0.0412253
+   Cavity determined by nc: 0.001 and sigma: 0.6
+   Effective cavity tension: 9.5e-06 Eh/bohr^2 to account for cavitation and dispersion.
+   Nonlinear dielectric with epsBulk = 78.4 and epsInf = 1.77 with density Nmol = 0.0049383 of dipoles pMol = 0.92466 at T = 298 K.
+   Nonlinear ions with screening length = 12.843 bohrs and Z = 1 at T = 298 K.
+
+
+---- Citations for features of the code used in this run ----
+
+   Software package:
+      R. Sundararaman, K. Letchworth-Weaver, K.A. Schwarz, D. Gunceler, Y. Ozhabes and T.A. Arias, 'JDFTx: software for joint density-functional theory', SoftwareX 6, 278 (2017)
+
+   gga-PBEsol exchange-correlation functional:
+      J.P. Perdew et al., Phys. Rev. Lett. 100, 136406 (2008)
+
+   Pseudopotentials:
+      KF Garrity, JW Bennett, KM Rabe and D Vanderbilt, Comput. Mater. Sci. 81, 446 (2014)
+
+   Truncated Coulomb potentials:
+      R. Sundararaman and T.A. Arias, Phys. Rev. B 87, 165122 (2013)
+
+   Linear/nonlinear dielectric/ionic fluid model with effective cavity tension:
+      D. Gunceler, K. Letchworth-Weaver, R. Sundararaman, K.A. Schwarz and T.A. Arias, Modelling Simul. Mater. Sci. Eng. 21, 074005 (2013)
+
+   Total energy minimization with Auxiliary Hamiltonian:
+      C. Freysoldt, S. Boeck, and J. Neugebauer, Phys. Rev. B 79, 241103(R) (2009)
+
+   Grand-canonical (fixed-potential) DFT:
+      R. Sundararaman, W. A. Goddard III and T. A. Arias, J. Chem. Phys. 146, 114104 (2017)
+
+This list may not be complete. Please suggest additional citations or
+report any other bugs at https://github.com/shankar1729/jdftx/issues
+
+Initialization completed successfully at t[s]:     89.37
+
+Shifting auxilliary hamiltonian by 0.032832 to set nElectrons=338.000000
+Initializing state of NonlinearPCM using a similar LinearPCM: 	Linear fluid (dielectric constant: 78.4, screening length: 12.843 Bohr) occupying 0.655440 of unit cell:	Completed after 50 iterations at t[s]:    102.72
+
+-------- Electron <-> Fluid self-consistency loop -----------
+
+---------------------- Fluid Minimization # 1 -----------------------
+FluidMinimize: Iter:   0  G: -0.004636420757707  |grad|_K:  4.904e-05  alpha:  1.000e+00
+FluidMinimize: Iter:   1  G: -0.004838917338441  |grad|_K:  1.074e-04  alpha:  6.469e-02  linmin: -1.013e-01  cgtest:  2.021e-01  t[s]:    105.19
+FluidMinimize: Iter:   2  G: -0.005108408106389  |grad|_K:  1.204e-04  alpha:  1.832e-02  linmin: -5.327e-03  cgtest: -7.896e-01  t[s]:    105.69
+FluidMinimize: Iter:   3  G: -0.005465841184082  |grad|_K:  1.789e-04  alpha:  2.495e-02  linmin: -5.427e-02  cgtest:  9.727e-01  t[s]:    106.20
+FluidMinimize: Iter:   4  G: -0.005665810412446  |grad|_K:  3.433e-05  alpha:  7.176e-03  linmin:  1.427e-02  cgtest: -6.042e-01  t[s]:    106.74
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 2.152901e-02.
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 6.458702e-02.
+FluidMinimize: Iter:   5  G: -0.005747234544144  |grad|_K:  5.854e-05  alpha:  9.250e-02  linmin: -5.531e-03  cgtest:  3.303e-01  t[s]:    107.69
+FluidMinimize: Iter:   6  G: -0.005805163896421  |grad|_K:  5.608e-05  alpha:  2.135e-02  linmin:  1.521e-02  cgtest: -2.763e-01  t[s]:    108.21
+FluidMinimize: Iter:   7  G: -0.005844447514840  |grad|_K:  5.078e-05  alpha:  1.626e-02  linmin: -3.491e-04  cgtest:  2.949e-01  t[s]:    108.70
+FluidMinimize: Iter:   8  G: -0.005913109337271  |grad|_K:  4.214e-05  alpha:  2.871e-02  linmin: -8.269e-03  cgtest: -1.113e-01  t[s]:    109.20
+FluidMinimize: Iter:   9  G: -0.005941014372651  |grad|_K:  3.802e-05  alpha:  1.653e-02  linmin:  4.794e-05  cgtest: -9.258e-02  t[s]:    109.70
+FluidMinimize: Iter:  10  G: -0.006001867745881  |grad|_K:  4.732e-05  alpha:  4.483e-02  linmin: -9.653e-03  cgtest:  1.473e-01  t[s]:    110.21
+FluidMinimize: Iter:  11  G: -0.006051288400323  |grad|_K:  5.563e-05  alpha:  2.392e-02  linmin:  1.828e-03  cgtest: -1.347e-01  t[s]:    110.73
+FluidMinimize: Iter:  12  G: -0.006127192075390  |grad|_K:  5.185e-05  alpha:  2.847e-02  linmin:  1.694e-02  cgtest: -8.220e-02  t[s]:    111.22
+FluidMinimize: Iter:  13  G: -0.006190131779699  |grad|_K:  8.363e-05  alpha:  3.082e-02  linmin:  8.537e-03  cgtest:  5.398e-01  t[s]:    111.74
+FluidMinimize: Iter:  14  G: -0.006237973612731  |grad|_K:  3.067e-05  alpha:  6.077e-03  linmin: -3.524e-02  cgtest:  7.845e-01  t[s]:    112.24
+FluidMinimize: Encountered beta<0, resetting CG.
+FluidMinimize: Iter:  15  G: -0.006250078193165  |grad|_K:  3.570e-05  alpha:  1.403e-02  linmin: -2.826e-03  cgtest:  2.470e-02  t[s]:    112.76
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 4.209633e-02.
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 1.262890e-01.
+FluidMinimize: Iter:  16  G: -0.006344344044720  |grad|_K:  2.234e-05  alpha:  4.801e-02  linmin: -1.316e-01  cgtest:  6.235e-01  t[s]:    113.71
+FluidMinimize: Iter:  17  G: -0.006363479785110  |grad|_K:  5.784e-05  alpha:  4.120e-02  linmin:  4.951e-03  cgtest: -2.129e-02  t[s]:    114.21
+FluidMinimize: Iter:  18  G: -0.006374842484158  |grad|_K:  5.301e-05  alpha:  2.169e-03  linmin: -8.708e-02  cgtest:  9.893e-01  t[s]:    114.70
+FluidMinimize: Encountered beta<0, resetting CG.
+FluidMinimize: Iter:  19  G: -0.006386747630439  |grad|_K:  2.560e-05  alpha:  4.582e-03  linmin: -6.347e-03  cgtest:  9.545e-02  t[s]:    115.22
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 1.374518e-02.
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 4.123553e-02.
+FluidMinimize: Iter:  20  G: -0.006413769194843  |grad|_K:  4.129e-05  alpha:  4.434e-02  linmin:  4.837e-03  cgtest: -1.380e-01  t[s]:    116.19
+FluidMinimize: Iter:  21  G: -0.006473475090166  |grad|_K:  6.947e-05  alpha:  2.866e-02  linmin: -1.836e-02  cgtest:  8.611e-01  t[s]:    116.69
+FluidMinimize: Iter:  22  G: -0.006595585689762  |grad|_K:  7.498e-05  alpha:  2.447e-02  linmin:  2.407e-03  cgtest:  2.232e-01  t[s]:    117.19
+FluidMinimize: Iter:  23  G: -0.006604920424623  |grad|_K:  1.068e-04  alpha:  7.592e-03  linmin:  5.384e-02  cgtest: -4.365e-01  t[s]:    117.69
+FluidMinimize: 	Step increased G by 5.254578e-05, reducing alpha to 1.755774e-03.
+FluidMinimize: Iter:  24  G: -0.006618580146078  |grad|_K:  1.092e-04  alpha:  1.756e-03  linmin: -4.432e-02  cgtest:  9.951e-01  t[s]:    118.46
+FluidMinimize: Iter:  25  G: -0.006653145164733  |grad|_K:  6.240e-05  alpha:  3.621e-03  linmin:  3.188e-02  cgtest: -4.582e-01  t[s]:    118.94
+FluidMinimize: Iter:  26  G: -0.006667946031097  |grad|_K:  1.023e-04  alpha:  7.948e-03  linmin:  1.417e-03  cgtest:  8.365e-01  t[s]:    119.45
+FluidMinimize: Iter:  27  G: -0.006688838232856  |grad|_K:  4.091e-05  alpha:  2.862e-03  linmin:  2.486e-02  cgtest: -5.416e-01  t[s]:    119.95
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 8.585216e-03.
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 2.575565e-02.
+FluidMinimize: 	Step increased G by 9.112348e-05, reducing alpha to 7.086824e-03.
+FluidMinimize: Iter:  28  G: -0.006702624696884  |grad|_K:  4.402e-05  alpha:  7.087e-03  linmin: -1.131e-01  cgtest:  9.926e-01  t[s]:    121.16
+FluidMinimize: Iter:  29  G: -0.006709836187761  |grad|_K:  3.755e-05  alpha:  3.735e-03  linmin: -1.763e-03  cgtest: -2.613e-02  t[s]:    121.67
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 1.120512e-02.
+FluidMinimize: Iter:  30  G: -0.006738972035663  |grad|_K:  4.309e-05  alpha:  2.232e-02  linmin:  5.306e-04  cgtest:  2.538e-01  t[s]:    122.38
+FluidMinimize: Iter:  31  G: -0.006768137133903  |grad|_K:  1.044e-04  alpha:  1.813e-02  linmin: -4.096e-03  cgtest: -1.729e-02  t[s]:    122.88
+FluidMinimize: Iter:  32  G: -0.006771751872576  |grad|_K:  1.020e-04  alpha:  1.774e-04  linmin: -1.348e-01  cgtest:  9.999e-01  t[s]:    123.39
+FluidMinimize: Encountered beta<0, resetting CG.
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 5.321422e-04.
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 1.596427e-03.
+FluidMinimize: Iter:  33  G: -0.006793289487156  |grad|_K:  3.950e-05  alpha:  2.353e-03  linmin:  1.007e-02  cgtest: -1.797e-01  t[s]:    124.34
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 7.060000e-03.
+FluidMinimize: Iter:  34  G: -0.006812435128566  |grad|_K:  3.026e-05  alpha:  1.442e-02  linmin: -7.620e-03  cgtest:  3.856e-01  t[s]:    125.06
+FluidMinimize: Iter:  35  G: -0.006818457587839  |grad|_K:  4.838e-05  alpha:  7.188e-03  linmin:  1.126e-03  cgtest: -5.117e-02  t[s]:    125.57
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 2.156300e-02.
+FluidMinimize: Iter:  36  G: -0.006852749178921  |grad|_K:  5.013e-05  alpha:  1.190e-02  linmin: -1.861e-02  cgtest:  3.908e-01  t[s]:    126.32
+FluidMinimize: Iter:  37  G: -0.006869109862152  |grad|_K:  8.159e-05  alpha:  5.829e-03  linmin: -3.634e-03  cgtest:  6.359e-02  t[s]:    126.82
+FluidMinimize: Iter:  38  G: -0.006906193194645  |grad|_K:  6.392e-05  alpha:  5.822e-03  linmin: -7.299e-03  cgtest:  6.600e-01  t[s]:    127.32
+FluidMinimize: Iter:  39  G: -0.006915291341082  |grad|_K:  3.891e-05  alpha:  2.566e-03  linmin:  3.348e-03  cgtest: -1.021e-01  t[s]:    127.82
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 7.697147e-03.
+FluidMinimize: Iter:  40  G: -0.006930961288529  |grad|_K:  3.345e-05  alpha:  1.247e-02  linmin:  6.480e-03  cgtest: -7.036e-03  t[s]:    128.54
+FluidMinimize: Iter:  41  G: -0.006942100329305  |grad|_K:  8.799e-05  alpha:  1.239e-02  linmin:  3.955e-03  cgtest:  1.206e-01  t[s]:    129.04
+FluidMinimize: Iter:  42  G: -0.006995341438740  |grad|_K:  7.942e-05  alpha:  6.373e-03  linmin: -2.817e-02  cgtest:  8.762e-01  t[s]:    129.54
+FluidMinimize: Iter:  43  G: -0.007004812205564  |grad|_K:  3.043e-05  alpha:  1.893e-03  linmin:  1.474e-02  cgtest: -2.851e-01  t[s]:    130.05
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 5.678123e-03.
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 1.703437e-02.
+FluidMinimize: Iter:  44  G: -0.007019246056638  |grad|_K:  4.815e-05  alpha:  2.145e-02  linmin:  6.218e-03  cgtest:  4.214e-01  t[s]:    131.01
+FluidMinimize: Iter:  45  G: -0.007023836741027  |grad|_K:  3.263e-05  alpha:  1.766e-03  linmin: -2.657e-02  cgtest:  5.250e-01  t[s]:    131.51
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 5.298060e-03.
+FluidMinimize: Iter:  46  G: -0.007037606515272  |grad|_K:  2.330e-05  alpha:  1.260e-02  linmin: -1.188e-02  cgtest:  2.697e-02  t[s]:    132.24
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 3.779279e-02.
+FluidMinimize: Iter:  47  G: -0.007056463795587  |grad|_K:  7.171e-05  alpha:  3.314e-02  linmin:  3.733e-03  cgtest: -7.578e-02  t[s]:    132.96
+FluidMinimize: Iter:  48  G: -0.007058475881809  |grad|_K:  6.754e-05  alpha:  2.494e-04  linmin: -3.892e-02  cgtest:  9.978e-01  t[s]:    133.47
+FluidMinimize: Encountered beta<0, resetting CG.
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 7.480515e-04.
+FluidMinimize: Iter:  49  G: -0.007065771708247  |grad|_K:  3.362e-05  alpha:  1.723e-03  linmin: -8.494e-03  cgtest:  1.038e-01  t[s]:    134.20
+FluidMinimize: Converged (|Delta G|<1.000000e-05 for 2 iters).
+
+Fluid minimization # 1 changed total free energy by -2.429351e-03 at t[s]:    134.49
+
+-------------------- Electronic Minimization # 1 ---------------------
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.000000
+ElecMinimize: Iter:   0  G: -1760.884229291163820  |grad|_K:  7.123e-05  alpha:  1.000e+00
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.054235
+	SubspaceRotationAdjust: set factor to 0.502
+ElecMinimize: Iter:   1  G: -1760.884244232910987  |grad|_K:  7.275e-05  alpha:  2.940e-03  linmin:  1.796e-01  t[s]:    687.26
+ElecMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 8.819536e-03.
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.063930
+	SubspaceRotationAdjust: set factor to 0.252
+ElecMinimize: Iter:   2  G: -1760.884302293864721  |grad|_K:  5.836e-05  alpha:  1.061e-02  linmin: -1.875e-05  t[s]:   1161.34
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.033441
+	SubspaceRotationAdjust: set factor to 0.101
+	SubspaceRotationAdjust: resetting CG because factor has changed by 0.100821
+ElecMinimize: 	State modified externally: resetting search direction.
+ElecMinimize: Iter:   3  G: -1760.884762736918447  |grad|_K:  4.448e-06  alpha:  3.037e-03
+ElecMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 9.111599e-03.
+ElecMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 2.733480e-02.
+ElecMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 8.200439e-02.
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.043403
+	SubspaceRotationAdjust: set factor to 0.0546
+ElecMinimize: Iter:   4  G: -1760.884927153572562  |grad|_K:  1.019e-05  alpha:  1.869e-01  linmin: -1.798e-05  t[s]:   2264.04
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.028950
+	SubspaceRotationAdjust: set factor to 0.0334
+ElecMinimize: Iter:   5  G: -1760.885082322417020  |grad|_K:  5.355e-06  alpha:  3.332e-02  linmin: -5.351e-04  t[s]:   2647.83
+ElecMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 9.997352e-02.
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.034342
+	SubspaceRotationAdjust: set factor to 0.0477
+ElecMinimize: Iter:   6  G: -1760.885296028443690  |grad|_K:  2.714e-06  alpha:  1.665e-01  linmin:  2.337e-04  t[s]:   3124.65
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.043787
+	SubspaceRotationAdjust: set factor to 0.0271
+ElecMinimize: Iter:   7  G: -1760.885349353223774  |grad|_K:  4.423e-06  alpha:  1.638e-01  linmin: -2.367e-05  t[s]:   3511.46
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.036491
+	SubspaceRotationAdjust: set factor to 0.0192
+ElecMinimize: Iter:   8  G: -1760.885436983178579  |grad|_K:  1.698e-06  alpha:  1.008e-01  linmin:  9.402e-06  t[s]:   3896.87
+ElecMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 3.023966e-01.
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.040295
+	SubspaceRotationAdjust: set factor to 0.015
+ElecMinimize: Iter:   9  G: -1760.885496181343342  |grad|_K:  2.159e-06  alpha:  4.620e-01  linmin: -1.421e-05  t[s]:   4378.58
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.032726
+	SubspaceRotationAdjust: set factor to 0.0113
+	SubspaceRotationAdjust: resetting CG because factor has changed by 0.112331
+ElecMinimize: 	State modified externally: resetting search direction.
+ElecMinimize: Iter:  10  G: -1760.885539559565586  |grad|_K:  1.794e-06  alpha:  2.089e-01
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.039312
+	SubspaceRotationAdjust: set factor to 0.00852
+ElecMinimize: Iter:  11  G: -1760.885569844968131  |grad|_K:  1.082e-06  alpha:  2.117e-01  linmin: -3.263e-05  t[s]:   5304.79
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.036908
+	SubspaceRotationAdjust: set factor to 0.00838
+ElecMinimize: Iter:  12  G: -1760.885585048576786  |grad|_K:  6.598e-07  alpha:  2.920e-01  linmin:  1.996e-05  t[s]:   5688.37
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.037479
+	SubspaceRotationAdjust: set factor to 0.011
+ElecMinimize: Iter:  13  G: -1760.885599633657421  |grad|_K:  7.143e-07  alpha:  7.534e-01  linmin: -5.845e-05  t[s]:   6067.06
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.039715
+	SubspaceRotationAdjust: set factor to 0.0108
+ElecMinimize: Iter:  14  G: -1760.885617719564380  |grad|_K:  9.838e-07  alpha:  7.964e-01  linmin: -6.012e-06  t[s]:   6450.49
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.034618
+	SubspaceRotationAdjust: set factor to 0.00885
+ElecMinimize: Iter:  15  G: -1760.885639054329886  |grad|_K:  1.405e-06  alpha:  4.957e-01  linmin:  3.631e-08  t[s]:   6840.36
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.038608
+	SubspaceRotationAdjust: set factor to 0.00878
+ElecMinimize: Iter:  16  G: -1760.885720513141678  |grad|_K:  1.967e-06  alpha:  9.267e-01  linmin: -1.911e-05  t[s]:   7228.50
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.043468
+	SubspaceRotationAdjust: set factor to 0.00913
+ElecMinimize: Iter:  17  G: -1760.885900248378903  |grad|_K:  2.247e-06  alpha:  1.041e+00  linmin: -3.714e-05  t[s]:   7615.17
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.036389
+	SubspaceRotationAdjust: set factor to 0.00648
+ElecMinimize: Iter:  18  G: -1760.885985677796725  |grad|_K:  1.787e-06  alpha:  3.779e-01  linmin: -1.908e-05  t[s]:   7999.12
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.042228
+	SubspaceRotationAdjust: set factor to 0.0048
+ElecMinimize: Iter:  19  G: -1760.886034198204698  |grad|_K:  1.099e-06  alpha:  3.414e-01  linmin: -7.058e-06  t[s]:   8387.29
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.042201
+	SubspaceRotationAdjust: set factor to 0.00599
+ElecMinimize: Iter:  20  G: -1760.886058730203104  |grad|_K:  6.945e-07  alpha:  4.566e-01  linmin:  9.479e-07  t[s]:   8776.79
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.040575
+	SubspaceRotationAdjust: set factor to 0.00596
+ElecMinimize: Iter:  21  G: -1760.886067431366428  |grad|_K:  4.098e-07  alpha:  4.058e-01  linmin:  5.751e-06  t[s]:   9161.18
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.041149
+	SubspaceRotationAdjust: set factor to 0.00707
+ElecMinimize: Iter:  22  G: -1760.886070667756030  |grad|_K:  2.901e-07  alpha:  4.338e-01  linmin:  2.833e-06  t[s]:   9544.36
+ElecMinimize: Converged (|Delta G|<1.000000e-05 for 2 iters).
+Setting wave functions to eigenvectors of Hamiltonian
+
+Electronic minimization # 1 changed total free energy by -1.841377e-03 at t[s]:   9560.13
+
+---------------------- Fluid Minimization # 2 -----------------------
+FluidMinimize: Iter:   0  G: -0.018425250364795  |grad|_K:  3.644e-04  alpha:  1.000e+00
+FluidMinimize: 	Test step failed with G = inf, reducing alphaT to 1.000000e-01.
+FluidMinimize: Iter:   1  G: -0.018425844983741  |grad|_K:  3.637e-04  alpha:  2.481e-06  linmin: -1.421e-01  cgtest:  1.000e+00  t[s]:   9561.17
+FluidMinimize: Encountered beta<0, resetting CG.
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 7.444265e-06.
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 2.233279e-05.
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 6.699838e-05.
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 2.009951e-04.
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 6.029854e-04.
+FluidMinimize: Iter:   2  G: -0.018593841506749  |grad|_K:  1.625e-04  alpha:  1.322e-03  linmin: -3.472e-02  cgtest:  2.659e-01  t[s]:   9562.78
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 3.967016e-03.
+FluidMinimize: Iter:   3  G: -0.018800349746357  |grad|_K:  1.984e-04  alpha:  9.635e-03  linmin:  2.114e-02  cgtest: -3.123e-01  t[s]:   9563.52
+FluidMinimize: Iter:   4  G: -0.018846830248304  |grad|_K:  1.583e-04  alpha:  2.232e-03  linmin:  2.354e-03  cgtest:  5.875e-01  t[s]:   9564.03
+FluidMinimize: Iter:   5  G: -0.018909516979606  |grad|_K:  8.907e-05  alpha:  2.731e-03  linmin: -1.434e-02  cgtest:  1.230e-01  t[s]:   9564.57
+FluidMinimize: Iter:   6  G: -0.018933421878593  |grad|_K:  9.504e-05  alpha:  3.119e-03  linmin: -4.825e-03  cgtest: -8.145e-02  t[s]:   9565.06
+FluidMinimize: Iter:   7  G: -0.018986088751818  |grad|_K:  6.307e-05  alpha:  6.259e-03  linmin:  3.055e-03  cgtest: -2.460e-01  t[s]:   9565.55
+FluidMinimize: Iter:   8  G: -0.019020290398424  |grad|_K:  1.203e-04  alpha:  9.786e-03  linmin: -3.912e-03  cgtest:  9.854e-02  t[s]:   9566.06
+FluidMinimize: Iter:   9  G: -0.019046385207175  |grad|_K:  7.942e-05  alpha:  1.174e-03  linmin: -4.723e-02  cgtest:  8.563e-01  t[s]:   9566.55
+FluidMinimize: Encountered beta<0, resetting CG.
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 3.521921e-03.
+FluidMinimize: Iter:  10  G: -0.019066715390577  |grad|_K:  9.352e-05  alpha:  3.570e-03  linmin:  5.342e-04  cgtest: -7.895e-03  t[s]:   9567.30
+FluidMinimize: Iter:  11  G: -0.019086216047149  |grad|_K:  5.165e-05  alpha:  2.578e-03  linmin: -1.071e-03  cgtest:  2.911e-02  t[s]:   9567.79
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 7.734380e-03.
+FluidMinimize: Iter:  12  G: -0.019107873960679  |grad|_K:  4.855e-05  alpha:  9.190e-03  linmin:  1.148e-02  cgtest: -1.401e-01  t[s]:   9568.55
+FluidMinimize: Iter:  13  G: -0.019125330428091  |grad|_K:  1.203e-04  alpha:  9.803e-03  linmin:  3.606e-03  cgtest:  1.996e-01  t[s]:   9569.05
+FluidMinimize: Iter:  14  G: -0.019158645889939  |grad|_K:  6.044e-05  alpha:  2.411e-03  linmin: -1.309e-02  cgtest:  6.127e-01  t[s]:   9569.55
+FluidMinimize: Encountered beta<0, resetting CG.
+FluidMinimize: Iter:  15  G: -0.019173225842620  |grad|_K:  7.181e-05  alpha:  4.261e-03  linmin: -9.457e-03  cgtest:  6.656e-02  t[s]:   9570.06
+FluidMinimize: Iter:  16  G: -0.019187278960716  |grad|_K:  4.778e-05  alpha:  2.765e-03  linmin: -2.342e-04  cgtest: -2.987e-01  t[s]:   9570.57
+FluidMinimize: Iter:  17  G: -0.019199559870990  |grad|_K:  4.189e-05  alpha:  6.014e-03  linmin:  1.309e-03  cgtest:  1.395e-01  t[s]:   9571.06
+FluidMinimize: Iter:  18  G: -0.019211159415782  |grad|_K:  7.595e-05  alpha:  7.751e-03  linmin:  6.025e-03  cgtest: -2.670e-02  t[s]:   9571.56
+FluidMinimize: Iter:  19  G: -0.019220709158183  |grad|_K:  5.152e-05  alpha:  2.312e-03  linmin:  3.538e-03  cgtest:  3.508e-01  t[s]:   9572.06
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 6.935242e-03.
+FluidMinimize: Iter:  20  G: -0.019248215674051  |grad|_K:  6.988e-05  alpha:  1.119e-02  linmin: -2.111e-02  cgtest:  9.066e-02  t[s]:   9572.80
+FluidMinimize: Iter:  21  G: -0.019261418907925  |grad|_K:  6.571e-05  alpha:  2.122e-03  linmin: -2.927e-02  cgtest:  1.609e-01  t[s]:   9573.32
+FluidMinimize: Iter:  22  G: -0.019287903989445  |grad|_K:  5.711e-05  alpha:  5.776e-03  linmin:  5.701e-03  cgtest: -4.286e-01  t[s]:   9573.82
+FluidMinimize: Iter:  23  G: -0.019300323437580  |grad|_K:  8.148e-05  alpha:  4.611e-03  linmin:  1.308e-03  cgtest:  4.972e-01  t[s]:   9574.32
+FluidMinimize: Iter:  24  G: -0.019319273922068  |grad|_K:  5.549e-05  alpha:  3.365e-03  linmin: -1.264e-03  cgtest:  1.861e-02  t[s]:   9574.82
+FluidMinimize: Iter:  25  G: -0.019326479950502  |grad|_K:  5.284e-05  alpha:  2.541e-03  linmin:  1.075e-04  cgtest: -1.731e-02  t[s]:   9575.32
+FluidMinimize: Iter:  26  G: -0.019345217000791  |grad|_K:  5.365e-05  alpha:  6.699e-03  linmin: -2.390e-02  cgtest:  2.043e-01  t[s]:   9575.83
+FluidMinimize: Iter:  27  G: -0.019365681514564  |grad|_K:  7.771e-05  alpha:  6.846e-03  linmin:  5.721e-03  cgtest: -2.737e-01  t[s]:   9576.37
+FluidMinimize: Iter:  28  G: -0.019373190194842  |grad|_K:  5.487e-05  alpha:  1.536e-03  linmin: -5.186e-04  cgtest:  4.859e-01  t[s]:   9576.88
+FluidMinimize: Iter:  29  G: -0.019384922082936  |grad|_K:  4.834e-05  alpha:  4.070e-03  linmin: -1.050e-02  cgtest:  7.636e-02  t[s]:   9577.38
+FluidMinimize: Iter:  30  G: -0.019388514575784  |grad|_K:  2.911e-05  alpha:  1.524e-03  linmin: -1.051e-03  cgtest: -1.521e-01  t[s]:   9577.88
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 4.572475e-03.
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 1.371742e-02.
+FluidMinimize: Iter:  31  G: -0.019408808245156  |grad|_K:  9.104e-05  alpha:  2.886e-02  linmin:  1.031e-02  cgtest:  4.264e-01  t[s]:   9578.84
+FluidMinimize: Iter:  32  G: -0.019416878352201  |grad|_K:  5.291e-05  alpha:  1.283e-03  linmin: -3.374e-03  cgtest:  4.931e-01  t[s]:   9579.37
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 3.848475e-03.
+FluidMinimize: Iter:  33  G: -0.019434941402753  |grad|_K:  4.068e-05  alpha:  6.847e-03  linmin: -7.682e-03  cgtest:  5.857e-02  t[s]:   9580.09
+FluidMinimize: Iter:  34  G: -0.019438664375703  |grad|_K:  4.037e-05  alpha:  2.132e-03  linmin: -6.217e-03  cgtest:  2.732e-02  t[s]:   9580.62
+FluidMinimize: Iter:  35  G: -0.019445585313386  |grad|_K:  2.885e-05  alpha:  4.467e-03  linmin:  3.298e-03  cgtest: -9.792e-03  t[s]:   9581.11
+FluidMinimize: Converged (|Delta G|<1.000000e-05 for 2 iters).
+
+Fluid minimization # 2 changed total free energy by -1.020335e-03 at t[s]:   9581.40
+
+-------------------- Electronic Minimization # 2 ---------------------
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 337.837986
+ElecMinimize: Iter:   0  G: -1760.863245407862451  |grad|_K:  4.898e-05  alpha:  1.000e+00
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.049860
+	SubspaceRotationAdjust: set factor to 0.00392
+ElecMinimize: Iter:   1  G: -1760.883637367565143  |grad|_K:  1.305e-05  alpha:  2.146e-01  linmin:  7.339e-02  t[s]:  10134.84
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.044741
+	SubspaceRotationAdjust: set factor to 0.00476
+ElecMinimize: Iter:   2  G: -1760.886073497822963  |grad|_K:  6.133e-06  alpha:  3.512e-01  linmin:  5.355e-03  t[s]:  10522.05
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.054987
+	SubspaceRotationAdjust: set factor to 0.00652
+ElecMinimize: Iter:   3  G: -1760.886665241292121  |grad|_K:  3.804e-06  alpha:  3.578e-01  linmin: -9.565e-03  t[s]:  10905.27
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.071532
+	SubspaceRotationAdjust: set factor to 0.00766
+ElecMinimize: Iter:   4  G: -1760.887060180704566  |grad|_K:  3.059e-06  alpha:  5.938e-01  linmin:  1.746e-04  t[s]:  11290.42
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.068511
+	SubspaceRotationAdjust: set factor to 0.00683
+ElecMinimize: Iter:   5  G: -1760.887275382263169  |grad|_K:  2.421e-06  alpha:  5.179e-01  linmin:  4.039e-05  t[s]:  11676.41
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.074391
+	SubspaceRotationAdjust: set factor to 0.00629
+ElecMinimize: Iter:   6  G: -1760.887372699446587  |grad|_K:  1.487e-06  alpha:  3.762e-01  linmin: -2.531e-04  t[s]:  12064.52
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.072666
+	SubspaceRotationAdjust: set factor to 0.00793
+ElecMinimize: Iter:   7  G: -1760.887424737426272  |grad|_K:  9.529e-07  alpha:  5.288e-01  linmin:  3.066e-04  t[s]:  12448.09
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.070132
+	SubspaceRotationAdjust: set factor to 0.00855
+ElecMinimize: Iter:   8  G: -1760.887443185535176  |grad|_K:  7.130e-07  alpha:  4.585e-01  linmin:  4.324e-06  t[s]:  12838.76
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.071728
+	SubspaceRotationAdjust: set factor to 0.0093
+ElecMinimize: Iter:   9  G: -1760.887455654730275  |grad|_K:  7.586e-07  alpha:  5.518e-01  linmin: -4.691e-05  t[s]:  13225.22
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.068859
+	SubspaceRotationAdjust: set factor to 0.00957
+ElecMinimize: Iter:  10  G: -1760.887472334862196  |grad|_K:  8.521e-07  alpha:  6.516e-01  linmin:  5.830e-05  t[s]:  13608.87
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.070380
+	SubspaceRotationAdjust: set factor to 0.0098
+ElecMinimize: Iter:  11  G: -1760.887497745176915  |grad|_K:  9.848e-07  alpha:  7.892e-01  linmin: -5.989e-06  t[s]:  13995.80
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.068063
+	SubspaceRotationAdjust: set factor to 0.00981
+ElecMinimize: Iter:  12  G: -1760.887532401042108  |grad|_K:  1.001e-06  alpha:  8.036e-01  linmin:  7.716e-06  t[s]:  14381.00
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.070583
+	SubspaceRotationAdjust: set factor to 0.00975
+ElecMinimize: Iter:  13  G: -1760.887557197795559  |grad|_K:  7.913e-07  alpha:  5.572e-01  linmin: -1.319e-06  t[s]:  14768.00
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.068698
+	SubspaceRotationAdjust: set factor to 0.00946
+ElecMinimize: Iter:  14  G: -1760.887570439719411  |grad|_K:  6.988e-07  alpha:  4.756e-01  linmin:  2.701e-06  t[s]:  15148.31
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.071716
+	SubspaceRotationAdjust: set factor to 0.00919
+ElecMinimize: Iter:  15  G: -1760.887579668732769  |grad|_K:  6.191e-07  alpha:  4.253e-01  linmin: -1.849e-05  t[s]:  15534.26
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.071367
+	SubspaceRotationAdjust: set factor to 0.0104
+ElecMinimize: Iter:  16  G: -1760.887589332013931  |grad|_K:  6.148e-07  alpha:  5.669e-01  linmin:  5.687e-06  t[s]:  15921.36
+ElecMinimize: Converged (|Delta G|<1.000000e-05 for 2 iters).
+Setting wave functions to eigenvectors of Hamiltonian
+
+Electronic minimization # 2 changed total free energy by -4.983293e-04 at t[s]:  15938.38
+
+---------------------- Fluid Minimization # 3 -----------------------
+FluidMinimize: Iter:   0  G: -0.026759051424777  |grad|_K:  1.948e-04  alpha:  1.000e+00
+FluidMinimize: 	Step increased G by 6.938894e-17, reducing alpha to 3.426702e-28.
+FluidMinimize: 	Step increased G by 4.163336e-17, reducing alpha to 3.426702e-29.
+FluidMinimize: 	Step increased G by 4.163336e-17, reducing alpha to 3.426702e-30.
+FluidMinimize: 	Step increased G by 4.163336e-17, reducing alpha to 3.426702e-31.
+FluidMinimize: 	Step increased G by 4.857226e-17, reducing alpha to 3.426702e-32.
+FluidMinimize: Iter:   1  G: -0.026759051424777  |grad|_K:  1.948e-04  alpha:  3.427e-32  linmin: -1.311e-01  cgtest:  1.000e+00  t[s]:  15940.48
+FluidMinimize: Encountered beta<0, resetting CG.
+FluidMinimize: 	Step increased G by 1.491862e-16, reducing alpha to 3.426702e-28.
+FluidMinimize: 	Step increased G by 1.214306e-16, reducing alpha to 3.426702e-29.
+FluidMinimize: 	Step increased G by 1.214306e-16, reducing alpha to 3.426702e-30.
+FluidMinimize: 	Step increased G by 1.491862e-16, reducing alpha to 3.426702e-31.
+FluidMinimize: 	Step increased G by 1.491862e-16, reducing alpha to 3.426702e-32.
+FluidMinimize: 	Step increased G by 1.214306e-16, reducing alpha to 3.426702e-33.
+FluidMinimize: 	Step failed to reduce G after 6 attempts. Quitting step.
+FluidMinimize: 	Undoing step.
+FluidMinimize: 	Step failed along negative gradient direction.
+FluidMinimize: Probably at roundoff error limit. (Stopping)
+
+Fluid minimization # 3 changed total free energy by 9.714451e-17 at t[s]:  15942.85
+
+-------------------- Electronic Minimization # 3 ---------------------
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.430575
+ElecMinimize: Iter:   0  G: -1760.840810075289710  |grad|_K:  7.547e-05  alpha:  1.000e+00
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.215435
+	SubspaceRotationAdjust: set factor to 0.00635
+ElecMinimize: Iter:   1  G: -1760.877628886479670  |grad|_K:  2.213e-05  alpha:  1.157e-01  linmin: -2.254e-01  t[s]:  16498.96
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.118344
+	SubspaceRotationAdjust: set factor to 0.00486
+ElecMinimize: Iter:   2  G: -1760.881881078545575  |grad|_K:  1.191e-05  alpha:  1.565e-01  linmin:  5.223e-03  t[s]:  16884.36
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.087548
+	SubspaceRotationAdjust: set factor to 0.00434
+ElecMinimize: Iter:   3  G: -1760.883886211679737  |grad|_K:  7.820e-06  alpha:  3.238e-01  linmin:  3.805e-04  t[s]:  17266.30
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.102167
+	SubspaceRotationAdjust: set factor to 0.00534
+ElecMinimize: Iter:   4  G: -1760.884675394869646  |grad|_K:  5.542e-06  alpha:  2.908e-01  linmin: -4.252e-04  t[s]:  17652.31
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.113769
+	SubspaceRotationAdjust: set factor to 0.00581
+ElecMinimize: Iter:   5  G: -1760.885199994776031  |grad|_K:  4.716e-06  alpha:  3.836e-01  linmin: -7.621e-05  t[s]:  18035.52
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.108089
+	SubspaceRotationAdjust: set factor to 0.0068
+ElecMinimize: Iter:   6  G: -1760.885577705327933  |grad|_K:  4.497e-06  alpha:  3.820e-01  linmin:  2.108e-04  t[s]:  18421.06
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.100298
+	SubspaceRotationAdjust: set factor to 0.00776
+ElecMinimize: Iter:   7  G: -1760.886014544799991  |grad|_K:  4.990e-06  alpha:  4.868e-01  linmin:  6.419e-05  t[s]:  18808.05
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.105118
+	SubspaceRotationAdjust: set factor to 0.00832
+ElecMinimize: Iter:   8  G: -1760.886444129382653  |grad|_K:  4.804e-06  alpha:  3.888e-01  linmin: -8.150e-05  t[s]:  19192.76
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.102497
+	SubspaceRotationAdjust: set factor to 0.00936
+ElecMinimize: Iter:   9  G: -1760.886866471216308  |grad|_K:  4.487e-06  alpha:  4.113e-01  linmin: -3.484e-05  t[s]:  19585.55
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.088546
+	SubspaceRotationAdjust: set factor to 0.00925
+ElecMinimize: Iter:  10  G: -1760.887144038576707  |grad|_K:  3.609e-06  alpha:  3.095e-01  linmin:  7.645e-05  t[s]:  19969.53
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.086306
+	SubspaceRotationAdjust: set factor to 0.0116
+ElecMinimize: Iter:  11  G: -1760.887327713790683  |grad|_K:  2.667e-06  alpha:  3.175e-01  linmin: -4.973e-06  t[s]:  20352.40
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.089561
+	SubspaceRotationAdjust: set factor to 0.0113
+ElecMinimize: Iter:  12  G: -1760.887429521770855  |grad|_K:  2.321e-06  alpha:  3.220e-01  linmin: -6.338e-05  t[s]:  20739.25
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.083732
+	SubspaceRotationAdjust: set factor to 0.0124
+ElecMinimize: Iter:  13  G: -1760.887496213880695  |grad|_K:  1.635e-06  alpha:  2.782e-01  linmin:  5.448e-05  t[s]:  21122.48
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.081680
+	SubspaceRotationAdjust: set factor to 0.0153
+ElecMinimize: Iter:  14  G: -1760.887540073018727  |grad|_K:  1.430e-06  alpha:  3.694e-01  linmin:  8.537e-05  t[s]:  21507.72
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.084508
+	SubspaceRotationAdjust: set factor to 0.0151
+ElecMinimize: Iter:  15  G: -1760.887566107603561  |grad|_K:  1.328e-06  alpha:  2.867e-01  linmin: -9.550e-06  t[s]:  21889.83
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.081359
+	SubspaceRotationAdjust: set factor to 0.0166
+ElecMinimize: Iter:  16  G: -1760.887589100525247  |grad|_K:  1.115e-06  alpha:  2.934e-01  linmin:  1.708e-05  t[s]:  22277.73
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.082272
+	SubspaceRotationAdjust: set factor to 0.0202
+ElecMinimize: Iter:  17  G: -1760.887611066873205  |grad|_K:  1.019e-06  alpha:  3.978e-01  linmin: -4.364e-07  t[s]:  22664.71
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.084959
+	SubspaceRotationAdjust: set factor to 0.0205
+ElecMinimize: Iter:  18  G: -1760.887628997203137  |grad|_K:  1.123e-06  alpha:  3.886e-01  linmin: -1.358e-05  t[s]:  23047.20
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.081955
+	SubspaceRotationAdjust: set factor to 0.0156
+ElecMinimize: Iter:  19  G: -1760.887640139631685  |grad|_K:  1.017e-06  alpha:  1.984e-01  linmin: -1.994e-05  t[s]:  23432.39
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.083686
+	SubspaceRotationAdjust: set factor to 0.0147
+ElecMinimize: Iter:  20  G: -1760.887651382190143  |grad|_K:  7.117e-07  alpha:  2.444e-01  linmin: -1.595e-05  t[s]:  23817.70
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.083999
+	SubspaceRotationAdjust: set factor to 0.0175
+ElecMinimize: Iter:  21  G: -1760.887658904051932  |grad|_K:  5.158e-07  alpha:  3.340e-01  linmin: -6.075e-06  t[s]:  24203.56
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.083221
+	SubspaceRotationAdjust: set factor to 0.0168
+ElecMinimize: Iter:  22  G: -1760.887662102709328  |grad|_K:  4.362e-07  alpha:  2.704e-01  linmin:  2.616e-06  t[s]:  24587.69
+ElecMinimize: Converged (|Delta G|<1.000000e-05 for 2 iters).
+Setting wave functions to eigenvectors of Hamiltonian
+
+Electronic minimization # 3 changed total free energy by -7.277070e-05 at t[s]:  24604.27
+
+---------------------- Fluid Minimization # 4 -----------------------
+FluidMinimize: Iter:   0  G: -0.029843452752270  |grad|_K:  2.644e-04  alpha:  1.000e+00
+FluidMinimize: 	Test step failed with G = inf, reducing alphaT to 1.000000e-01.
+FluidMinimize: Iter:   1  G: -0.029867319949631  |grad|_K:  2.247e-04  alpha:  2.056e-04  linmin: -1.409e-01  cgtest:  9.886e-01  t[s]:  24605.34
+FluidMinimize: Encountered beta<0, resetting CG.
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 6.166683e-04.
+FluidMinimize: Iter:   2  G: -0.029952261991942  |grad|_K:  2.068e-04  alpha:  1.772e-03  linmin: -1.427e-02  cgtest:  9.671e-02  t[s]:  24606.12
+FluidMinimize: Iter:   3  G: -0.030082159509792  |grad|_K:  1.693e-04  alpha:  3.637e-03  linmin:  3.275e-02  cgtest: -7.079e-01  t[s]:  24606.63
+FluidMinimize: Iter:   4  G: -0.030088473018025  |grad|_K:  1.434e-04  alpha:  6.041e-04  linmin:  1.716e-04  cgtest:  9.604e-01  t[s]:  24607.16
+FluidMinimize: Encountered beta<0, resetting CG.
+FluidMinimize: Iter:   5  G: -0.030107756990944  |grad|_K:  8.630e-05  alpha:  1.026e-03  linmin: -3.986e-03  cgtest:  4.527e-02  t[s]:  24607.68
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 3.077022e-03.
+FluidMinimize: Iter:   6  G: -0.030138102369148  |grad|_K:  7.439e-05  alpha:  4.517e-03  linmin:  6.322e-03  cgtest: -1.969e-01  t[s]:  24608.41
+FluidMinimize: Iter:   7  G: -0.030153160811131  |grad|_K:  8.058e-05  alpha:  3.364e-03  linmin: -8.901e-04  cgtest:  1.352e-01  t[s]:  24608.93
+FluidMinimize: Iter:   8  G: -0.030166285582765  |grad|_K:  7.910e-05  alpha:  2.200e-03  linmin: -7.593e-05  cgtest: -1.106e-01  t[s]:  24609.44
+FluidMinimize: Iter:   9  G: -0.030190794888079  |grad|_K:  7.129e-05  alpha:  4.285e-03  linmin: -1.738e-03  cgtest:  1.985e-01  t[s]:  24609.93
+FluidMinimize: Iter:  10  G: -0.030207595753775  |grad|_K:  5.513e-05  alpha:  3.531e-03  linmin:  1.944e-03  cgtest: -2.568e-02  t[s]:  24610.44
+FluidMinimize: Iter:  11  G: -0.030214424311374  |grad|_K:  7.853e-05  alpha:  2.577e-03  linmin: -2.292e-04  cgtest:  4.093e-02  t[s]:  24610.94
+FluidMinimize: Iter:  12  G: -0.030236957689229  |grad|_K:  7.091e-05  alpha:  4.125e-03  linmin:  3.896e-03  cgtest: -2.418e-01  t[s]:  24611.46
+FluidMinimize: Iter:  13  G: -0.030247356384876  |grad|_K:  6.388e-05  alpha:  2.555e-03  linmin:  3.751e-04  cgtest:  4.187e-02  t[s]:  24611.98
+FluidMinimize: Iter:  14  G: -0.030256909384292  |grad|_K:  6.405e-05  alpha:  2.609e-03  linmin:  1.772e-03  cgtest: -5.191e-02  t[s]:  24612.46
+FluidMinimize: Iter:  15  G: -0.030265652349397  |grad|_K:  4.175e-05  alpha:  2.423e-03  linmin: -1.075e-03  cgtest:  1.994e-01  t[s]:  24612.97
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 7.267727e-03.
+FluidMinimize: Iter:  16  G: -0.030276750653901  |grad|_K:  8.731e-05  alpha:  6.964e-03  linmin:  2.762e-03  cgtest: -3.276e-03  t[s]:  24613.71
+FluidMinimize: Iter:  17  G: -0.030290515430388  |grad|_K:  7.850e-05  alpha:  2.058e-03  linmin: -9.936e-04  cgtest:  2.093e-01  t[s]:  24614.22
+FluidMinimize: Iter:  18  G: -0.030307374525883  |grad|_K:  2.977e-05  alpha:  2.955e-03  linmin: -3.512e-03  cgtest: -1.472e-01  t[s]:  24614.72
+FluidMinimize: Iter:  19  G: -0.030311252447776  |grad|_K:  6.295e-05  alpha:  4.543e-03  linmin: -2.309e-03  cgtest: -3.160e-02  t[s]:  24615.22
+FluidMinimize: Iter:  20  G: -0.030332577346363  |grad|_K:  6.112e-05  alpha:  5.910e-03  linmin:  4.529e-03  cgtest: -3.281e-01  t[s]:  24615.72
+FluidMinimize: Iter:  21  G: -0.030340555534158  |grad|_K:  5.519e-05  alpha:  2.758e-03  linmin:  2.302e-04  cgtest:  2.928e-01  t[s]:  24616.22
+FluidMinimize: Iter:  22  G: -0.030349461634093  |grad|_K:  7.688e-05  alpha:  3.294e-03  linmin:  2.118e-03  cgtest: -3.122e-02  t[s]:  24616.72
+FluidMinimize: Iter:  23  G: -0.030359813617983  |grad|_K:  4.950e-05  alpha:  2.074e-03  linmin:  4.349e-05  cgtest:  2.678e-01  t[s]:  24617.23
+FluidMinimize: Iter:  24  G: -0.030373171858699  |grad|_K:  4.941e-05  alpha:  5.842e-03  linmin: -4.490e-03  cgtest:  1.768e-02  t[s]:  24617.74
+FluidMinimize: Iter:  25  G: -0.030384153639569  |grad|_K:  6.946e-05  alpha:  4.726e-03  linmin: -2.349e-04  cgtest: -9.436e-02  t[s]:  24618.24
+FluidMinimize: Iter:  26  G: -0.030389960393603  |grad|_K:  4.638e-05  alpha:  1.159e-03  linmin: -6.882e-03  cgtest:  2.831e-01  t[s]:  24618.73
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 3.478303e-03.
+FluidMinimize: Iter:  27  G: -0.030404789750667  |grad|_K:  5.422e-05  alpha:  7.035e-03  linmin: -2.449e-03  cgtest: -6.756e-02  t[s]:  24619.44
+FluidMinimize: Iter:  28  G: -0.030409028661450  |grad|_K:  5.453e-05  alpha:  1.681e-03  linmin:  4.744e-03  cgtest: -1.421e-01  t[s]:  24619.93
+FluidMinimize: Iter:  29  G: -0.030417861299650  |grad|_K:  5.027e-05  alpha:  3.710e-03  linmin:  5.520e-03  cgtest:  2.916e-01  t[s]:  24620.45
+FluidMinimize: Iter:  30  G: -0.030423244116540  |grad|_K:  6.972e-05  alpha:  2.470e-03  linmin: -1.044e-05  cgtest:  6.033e-02  t[s]:  24620.95
+FluidMinimize: Iter:  31  G: -0.030432159092450  |grad|_K:  3.834e-05  alpha:  2.063e-03  linmin: -2.323e-03  cgtest: -1.339e-01  t[s]:  24621.45
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 6.187526e-03.
+FluidMinimize: Iter:  32  G: -0.030446057051428  |grad|_K:  4.314e-05  alpha:  1.039e-02  linmin:  4.521e-03  cgtest: -2.411e-01  t[s]:  24622.16
+FluidMinimize: Iter:  33  G: -0.030454057810155  |grad|_K:  6.776e-05  alpha:  4.923e-03  linmin: -1.051e-03  cgtest:  1.336e-01  t[s]:  24622.67
+FluidMinimize: Iter:  34  G: -0.030459781901635  |grad|_K:  5.049e-05  alpha:  1.549e-03  linmin:  8.129e-03  cgtest: -2.673e-01  t[s]:  24623.17
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 4.646743e-03.
+FluidMinimize: Iter:  35  G: -0.030470933949681  |grad|_K:  4.778e-05  alpha:  5.672e-03  linmin:  3.903e-03  cgtest:  3.731e-01  t[s]:  24623.90
+FluidMinimize: Iter:  36  G: -0.030477653177856  |grad|_K:  4.809e-05  alpha:  3.394e-03  linmin: -6.668e-05  cgtest:  5.060e-02  t[s]:  24624.39
+FluidMinimize: Iter:  37  G: -0.030480541516641  |grad|_K:  4.036e-05  alpha:  1.319e-03  linmin: -2.089e-03  cgtest:  5.267e-02  t[s]:  24624.89
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 3.958187e-03.
+FluidMinimize: Iter:  38  G: -0.030490012366156  |grad|_K:  4.130e-05  alpha:  6.068e-03  linmin: -4.676e-03  cgtest: -2.156e-02  t[s]:  24625.60
+FluidMinimize: Iter:  39  G: -0.030501627950406  |grad|_K:  8.075e-05  alpha:  7.136e-03  linmin:  4.250e-03  cgtest: -1.172e-01  t[s]:  24626.10
+FluidMinimize: Iter:  40  G: -0.030507099418596  |grad|_K:  4.006e-05  alpha:  1.182e-03  linmin:  5.221e-03  cgtest:  1.885e-01  t[s]:  24626.61
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 3.546393e-03.
+FluidMinimize: Iter:  41  G: -0.030516664185571  |grad|_K:  5.671e-05  alpha:  6.795e-03  linmin: -6.968e-03  cgtest:  1.052e-01  t[s]:  24627.36
+FluidMinimize: Iter:  42  G: -0.030520795261576  |grad|_K:  4.305e-05  alpha:  1.176e-03  linmin: -1.040e-02  cgtest:  3.048e-02  t[s]:  24627.85
+FluidMinimize: Iter:  43  G: -0.030527119650099  |grad|_K:  3.031e-05  alpha:  3.430e-03  linmin:  1.865e-03  cgtest: -2.149e-01  t[s]:  24628.36
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 1.028958e-02.
+FluidMinimize: Iter:  44  G: -0.030536779690724  |grad|_K:  5.254e-05  alpha:  1.198e-02  linmin: -3.305e-03  cgtest:  2.706e-01  t[s]:  24629.07
+FluidMinimize: Iter:  45  G: -0.030539189289944  |grad|_K:  2.723e-05  alpha:  7.766e-04  linmin: -1.289e-02  cgtest:  3.168e-01  t[s]:  24629.57
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 2.329764e-03.
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 6.989292e-03.
+FluidMinimize: Iter:  46  G: -0.030547121835505  |grad|_K:  3.152e-05  alpha:  1.089e-02  linmin: -2.799e-03  cgtest: -9.599e-02  t[s]:  24630.49
+FluidMinimize: Iter:  47  G: -0.030550007103066  |grad|_K:  4.094e-05  alpha:  2.771e-03  linmin: -1.040e-02  cgtest:  1.069e-01  t[s]:  24631.00
+FluidMinimize: Iter:  48  G: -0.030552734055413  |grad|_K:  3.039e-05  alpha:  1.644e-03  linmin:  1.020e-04  cgtest: -2.021e-01  t[s]:  24631.50
+FluidMinimize: Iter:  49  G: -0.030556141233598  |grad|_K:  3.317e-05  alpha:  4.134e-03  linmin:  1.618e-03  cgtest:  1.779e-01  t[s]:  24632.00
+FluidMinimize: Iter:  50  G: -0.030558939723708  |grad|_K:  4.247e-05  alpha:  2.924e-03  linmin: -5.197e-04  cgtest: -9.817e-03  t[s]:  24632.50
+FluidMinimize: Iter:  51  G: -0.030562255726205  |grad|_K:  4.093e-05  alpha:  2.013e-03  linmin:  4.895e-05  cgtest: -5.784e-02  t[s]:  24633.00
+FluidMinimize: Iter:  52  G: -0.030568800661524  |grad|_K:  3.270e-05  alpha:  4.311e-03  linmin: -6.549e-04  cgtest:  7.203e-02  t[s]:  24633.49
+FluidMinimize: Iter:  53  G: -0.030571511229832  |grad|_K:  4.604e-05  alpha:  2.718e-03  linmin: -4.287e-04  cgtest:  2.149e-02  t[s]:  24634.00
+FluidMinimize: Iter:  54  G: -0.030575506919397  |grad|_K:  3.821e-05  alpha:  2.085e-03  linmin: -2.459e-04  cgtest:  8.599e-02  t[s]:  24634.49
+FluidMinimize: Iter:  55  G: -0.030580776768454  |grad|_K:  3.005e-05  alpha:  3.949e-03  linmin: -1.736e-03  cgtest: -9.708e-03  t[s]:  24635.00
+FluidMinimize: Iter:  56  G: -0.030582616178541  |grad|_K:  4.295e-05  alpha:  2.253e-03  linmin:  5.948e-04  cgtest: -4.378e-02  t[s]:  24635.51
+FluidMinimize: Iter:  57  G: -0.030589629505941  |grad|_K:  3.780e-05  alpha:  4.296e-03  linmin:  3.347e-03  cgtest: -1.099e-01  t[s]:  24636.01
+FluidMinimize: Iter:  58  G: -0.030593994139101  |grad|_K:  4.454e-05  alpha:  3.493e-03  linmin:  5.390e-05  cgtest:  5.876e-02  t[s]:  24636.50
+FluidMinimize: Iter:  59  G: -0.030597309986520  |grad|_K:  4.891e-05  alpha:  1.779e-03  linmin: -1.408e-03  cgtest:  3.029e-02  t[s]:  24637.01
+FluidMinimize: Iter:  60  G: -0.030604961165976  |grad|_K:  3.201e-05  alpha:  3.447e-03  linmin: -1.228e-03  cgtest:  1.349e-01  t[s]:  24637.51
+FluidMinimize: Iter:  61  G: -0.030608240135374  |grad|_K:  4.326e-05  alpha:  3.504e-03  linmin: -1.106e-05  cgtest: -4.516e-03  t[s]:  24638.01
+FluidMinimize: Iter:  62  G: -0.030610933436142  |grad|_K:  4.098e-05  alpha:  1.669e-03  linmin:  1.946e-03  cgtest: -4.672e-02  t[s]:  24638.50
+FluidMinimize: Iter:  63  G: -0.030617039482811  |grad|_K:  3.345e-05  alpha:  4.377e-03  linmin:  7.488e-03  cgtest: -1.402e-01  t[s]:  24639.01
+FluidMinimize: Iter:  64  G: -0.030618831591256  |grad|_K:  4.009e-05  alpha:  2.039e-03  linmin:  3.405e-04  cgtest:  1.080e-01  t[s]:  24639.51
+FluidMinimize: Iter:  65  G: -0.030623406616263  |grad|_K:  4.940e-05  alpha:  3.242e-03  linmin:  3.104e-03  cgtest: -2.138e-01  t[s]:  24640.02
+FluidMinimize: Iter:  66  G: -0.030627600366375  |grad|_K:  3.858e-05  alpha:  2.092e-03  linmin:  9.451e-05  cgtest:  1.708e-01  t[s]:  24640.51
+FluidMinimize: Iter:  67  G: -0.030631699698300  |grad|_K:  4.689e-05  alpha:  3.072e-03  linmin:  8.412e-04  cgtest: -2.615e-02  t[s]:  24641.02
+FluidMinimize: Iter:  68  G: -0.030634986651646  |grad|_K:  4.338e-05  alpha:  1.740e-03  linmin:  7.359e-04  cgtest: -5.050e-03  t[s]:  24641.52
+FluidMinimize: Iter:  69  G: -0.030641642024319  |grad|_K:  4.902e-05  alpha:  4.187e-03  linmin:  7.341e-03  cgtest: -1.295e-01  t[s]:  24642.02
+FluidMinimize: Iter:  70  G: -0.030644609364482  |grad|_K:  4.703e-05  alpha:  1.573e-03  linmin:  5.903e-04  cgtest:  1.678e-01  t[s]:  24642.55
+FluidMinimize: Iter:  71  G: -0.030652254144128  |grad|_K:  5.320e-05  alpha:  3.930e-03  linmin:  1.958e-03  cgtest: -1.953e-01  t[s]:  24643.06
+FluidMinimize: Iter:  72  G: -0.030654805813478  |grad|_K:  2.872e-05  alpha:  1.142e-03  linmin:  3.787e-03  cgtest: -1.154e-01  t[s]:  24643.57
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 3.424938e-03.
+FluidMinimize: Iter:  73  G: -0.030657514296207  |grad|_K:  3.569e-05  alpha:  3.966e-03  linmin:  9.561e-06  cgtest:  5.779e-02  t[s]:  24644.30
+FluidMinimize: Iter:  74  G: -0.030660611685080  |grad|_K:  5.100e-05  alpha:  2.732e-03  linmin: -8.777e-05  cgtest: -7.956e-02  t[s]:  24644.79
+FluidMinimize: Iter:  75  G: -0.030665502790683  |grad|_K:  2.815e-05  alpha:  2.037e-03  linmin:  4.520e-04  cgtest: -5.657e-02  t[s]:  24645.30
+FluidMinimize: Iter:  76  G: -0.030668242896774  |grad|_K:  4.760e-05  alpha:  3.856e-03  linmin: -2.543e-04  cgtest:  2.174e-02  t[s]:  24645.80
+FluidMinimize: Iter:  77  G: -0.030672019788181  |grad|_K:  4.119e-05  alpha:  1.719e-03  linmin: -1.829e-03  cgtest:  5.215e-02  t[s]:  24646.31
+FluidMinimize: Iter:  78  G: -0.030677656657718  |grad|_K:  3.325e-05  alpha:  3.452e-03  linmin: -2.575e-03  cgtest:  3.844e-02  t[s]:  24646.83
+FluidMinimize: Iter:  79  G: -0.030679443443000  |grad|_K:  4.117e-05  alpha:  1.682e-03  linmin: -3.424e-04  cgtest: -2.414e-02  t[s]:  24647.34
+FluidMinimize: Iter:  80  G: -0.030686113397088  |grad|_K:  3.095e-05  alpha:  4.183e-03  linmin: -2.936e-03  cgtest:  3.295e-01  t[s]:  24647.84
+FluidMinimize: Iter:  81  G: -0.030690984986151  |grad|_K:  3.062e-05  alpha:  5.524e-03  linmin:  2.968e-03  cgtest: -8.594e-02  t[s]:  24648.36
+FluidMinimize: Iter:  82  G: -0.030696562494354  |grad|_K:  3.163e-05  alpha:  6.923e-03  linmin: -4.180e-04  cgtest:  2.510e-01  t[s]:  24648.86
+FluidMinimize: Iter:  83  G: -0.030702563430609  |grad|_K:  5.573e-05  alpha:  6.605e-03  linmin:  8.496e-04  cgtest: -3.864e-02  t[s]:  24649.37
+FluidMinimize: Iter:  84  G: -0.030705314338525  |grad|_K:  4.111e-05  alpha:  1.219e-03  linmin:  1.386e-02  cgtest: -2.567e-01  t[s]:  24649.87
+FluidMinimize: Iter:  85  G: -0.030709527986271  |grad|_K:  4.110e-05  alpha:  3.627e-03  linmin:  2.480e-03  cgtest:  5.462e-01  t[s]:  24650.40
+FluidMinimize: Iter:  86  G: -0.030714040091375  |grad|_K:  5.630e-05  alpha:  2.994e-03  linmin:  7.056e-04  cgtest: -2.199e-03  t[s]:  24650.89
+FluidMinimize: Iter:  87  G: -0.030716823790476  |grad|_K:  2.260e-05  alpha:  1.062e-03  linmin:  6.867e-03  cgtest: -2.112e-01  t[s]:  24651.40
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 3.187130e-03.
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 9.561389e-03.
+FluidMinimize: Iter:  88  G: -0.030722977924445  |grad|_K:  3.743e-05  alpha:  1.493e-02  linmin:  5.812e-03  cgtest:  6.995e-02  t[s]:  24652.33
+FluidMinimize: Iter:  89  G: -0.030724677038948  |grad|_K:  4.926e-05  alpha:  1.739e-03  linmin:  1.344e-02  cgtest: -1.205e-01  t[s]:  24652.84
+FluidMinimize: Iter:  90  G: -0.030729585429043  |grad|_K:  3.339e-05  alpha:  2.754e-03  linmin:  2.135e-03  cgtest:  5.782e-01  t[s]:  24653.33
+FluidMinimize: Iter:  91  G: -0.030731704248621  |grad|_K:  4.976e-05  alpha:  2.097e-03  linmin:  3.279e-04  cgtest:  1.164e-03  t[s]:  24653.84
+FluidMinimize: Iter:  92  G: -0.030736175701645  |grad|_K:  1.927e-05  alpha:  2.008e-03  linmin: -3.259e-04  cgtest:  2.617e-01  t[s]:  24654.34
+FluidMinimize: Iter:  93  G: -0.030737192209032  |grad|_K:  3.070e-05  alpha:  3.013e-03  linmin: -7.123e-04  cgtest:  3.399e-03  t[s]:  24654.85
+FluidMinimize: Iter:  94  G: -0.030738274887002  |grad|_K:  1.400e-05  alpha:  1.223e-03  linmin: -1.326e-03  cgtest: -5.352e-03  t[s]:  24655.35
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 3.667830e-03.
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 1.100349e-02.
+FluidMinimize: Iter:  95  G: -0.030740467834548  |grad|_K:  2.343e-05  alpha:  1.214e-02  linmin: -9.575e-04  cgtest: -9.100e-03  t[s]:  24656.31
+FluidMinimize: Iter:  96  G: -0.030741527302299  |grad|_K:  3.390e-05  alpha:  2.213e-03  linmin:  3.241e-03  cgtest: -5.184e-02  t[s]:  24656.81
+FluidMinimize: Iter:  97  G: -0.030743275708620  |grad|_K:  2.007e-05  alpha:  1.741e-03  linmin:  6.838e-04  cgtest:  2.159e-01  t[s]:  24657.31
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 5.223279e-03.
+FluidMinimize: Iter:  98  G: -0.030745228745984  |grad|_K:  4.442e-05  alpha:  5.398e-03  linmin:  6.885e-04  cgtest: -1.906e-03  t[s]:  24658.03
+FluidMinimize: Iter:  99  G: -0.030747318229942  |grad|_K:  2.493e-05  alpha:  1.379e-03  linmin:  2.389e-02  cgtest: -2.122e-01  t[s]:  24658.54
+FluidMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 4.137667e-03.
+FluidMinimize: Iter: 100  G: -0.030750326771225  |grad|_K:  2.422e-05  alpha:  6.524e-03  linmin:  3.717e-03  cgtest:  4.158e-01  t[s]:  24659.28
+FluidMinimize: None of the convergence criteria satisfied after 100 iterations.
+
+Fluid minimization # 4 changed total free energy by -9.068740e-04 at t[s]:  24659.56
+
+-------------------- Electronic Minimization # 4 ---------------------
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.506623
+ElecMinimize: Iter:   0  G: -1760.811060238263963  |grad|_K:  1.369e-04  alpha:  1.000e+00
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.202646
+	SubspaceRotationAdjust: set factor to 0.00867
+ElecMinimize: Iter:   1  G: -1760.883103841962793  |grad|_K:  3.496e-05  alpha:  6.872e-02  linmin: -2.775e-01  t[s]:  25208.61
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.098963
+	SubspaceRotationAdjust: set factor to 0.00896
+ElecMinimize: Iter:   2  G: -1760.888063606566675  |grad|_K:  4.139e-06  alpha:  7.283e-02  linmin:  8.400e-03  t[s]:  25590.55
+ElecMinimize: 	Predicted alpha/alphaT>3.000000, increasing alphaT to 2.184874e-01.
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.092968
+	SubspaceRotationAdjust: set factor to 0.0125
+ElecMinimize: Iter:   3  G: -1760.888355848325091  |grad|_K:  2.018e-06  alpha:  3.875e-01  linmin:  1.182e-03  t[s]:  26064.37
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.095059
+	SubspaceRotationAdjust: set factor to 0.0135
+ElecMinimize: Iter:   4  G: -1760.888456722121418  |grad|_K:  1.873e-06  alpha:  5.580e-01  linmin: -5.448e-05  t[s]:  26448.66
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.090793
+	SubspaceRotationAdjust: set factor to 0.0111
+ElecMinimize: Iter:   5  G: -1760.888533617767962  |grad|_K:  2.245e-06  alpha:  4.929e-01  linmin:  1.311e-04  t[s]:  26836.18
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.101399
+	SubspaceRotationAdjust: set factor to 0.00817
+ElecMinimize: Iter:   6  G: -1760.888597298371224  |grad|_K:  1.771e-06  alpha:  2.851e-01  linmin:  4.895e-05  t[s]:  27217.75
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.103037
+	SubspaceRotationAdjust: set factor to 0.00939
+ElecMinimize: Iter:   7  G: -1760.888680665821084  |grad|_K:  1.356e-06  alpha:  5.982e-01  linmin: -4.544e-05  t[s]:  27606.47
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.101763
+	SubspaceRotationAdjust: set factor to 0.00895
+ElecMinimize: Iter:   8  G: -1760.888715986368879  |grad|_K:  1.094e-06  alpha:  4.316e-01  linmin:  1.719e-05  t[s]:  27990.21
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.105746
+	SubspaceRotationAdjust: set factor to 0.00726
+ElecMinimize: Iter:   9  G: -1760.888733471471596  |grad|_K:  7.237e-07  alpha:  3.290e-01  linmin: -2.694e-05  t[s]:  28374.23
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.104309
+	SubspaceRotationAdjust: set factor to 0.00858
+ElecMinimize: Iter:  10  G: -1760.888743237461313  |grad|_K:  5.001e-07  alpha:  4.195e-01  linmin:  3.835e-06  t[s]:  28758.50
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.103994
+	SubspaceRotationAdjust: set factor to 0.0101
+ElecMinimize: Iter:  11  G: -1760.888749313383641  |grad|_K:  4.898e-07  alpha:  5.470e-01  linmin:  9.481e-05  t[s]:  29142.18
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.105727
+	SubspaceRotationAdjust: set factor to 0.00957
+ElecMinimize: Iter:  12  G: -1760.888754583950231  |grad|_K:  5.396e-07  alpha:  4.950e-01  linmin: -1.246e-06  t[s]:  29534.24
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.103626
+	SubspaceRotationAdjust: set factor to 0.0093
+ElecMinimize: Iter:  13  G: -1760.888761441724910  |grad|_K:  5.861e-07  alpha:  5.300e-01  linmin:  8.325e-06  t[s]:  29918.19
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.103925
+	SubspaceRotationAdjust: set factor to 0.0106
+ElecMinimize: Iter:  14  G: -1760.888772333283441  |grad|_K:  6.302e-07  alpha:  7.136e-01  linmin:  1.696e-05  t[s]:  30303.79
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.105308
+	SubspaceRotationAdjust: set factor to 0.0108
+ElecMinimize: Iter:  15  G: -1760.888783370110787  |grad|_K:  6.928e-07  alpha:  6.257e-01  linmin: -7.782e-06  t[s]:  30686.29
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.102681
+	SubspaceRotationAdjust: set factor to 0.00865
+ElecMinimize: Iter:  16  G: -1760.888790788326105  |grad|_K:  6.156e-07  alpha:  3.474e-01  linmin: -5.821e-06  t[s]:  31066.93
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.104420
+	SubspaceRotationAdjust: set factor to 0.00967
+ElecMinimize: Iter:  17  G: -1760.888798468166442  |grad|_K:  4.546e-07  alpha:  4.558e-01  linmin: -8.309e-06  t[s]:  31452.76
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.105301
+	SubspaceRotationAdjust: set factor to 0.0121
+ElecMinimize: Iter:  18  G: -1760.888803613547452  |grad|_K:  3.983e-07  alpha:  5.600e-01  linmin: -1.447e-05  t[s]:  31836.51
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.104333
+	SubspaceRotationAdjust: set factor to 0.0108
+ElecMinimize: Iter:  19  G: -1760.888806809925200  |grad|_K:  4.255e-07  alpha:  4.532e-01  linmin:  8.249e-06  t[s]:  32222.36
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.106344
+	SubspaceRotationAdjust: set factor to 0.0102
+ElecMinimize: Iter:  20  G: -1760.888810044491265  |grad|_K:  4.186e-07  alpha:  4.021e-01  linmin: -1.120e-06  t[s]:  32610.59
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.106370
+	SubspaceRotationAdjust: set factor to 0.0116
+ElecMinimize: Iter:  21  G: -1760.888814662122968  |grad|_K:  4.366e-07  alpha:  5.931e-01  linmin:  8.693e-06  t[s]:  32999.16
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.107008
+	SubspaceRotationAdjust: set factor to 0.0131
+ElecMinimize: Iter:  22  G: -1760.888821017537111  |grad|_K:  5.024e-07  alpha:  7.506e-01  linmin:  8.128e-06  t[s]:  33393.04
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.109658
+	SubspaceRotationAdjust: set factor to 0.0115
+ElecMinimize: Iter:  23  G: -1760.888826610674414  |grad|_K:  5.514e-07  alpha:  4.989e-01  linmin:  1.392e-06  t[s]:  33776.48
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.108391
+	SubspaceRotationAdjust: set factor to 0.00821
+ElecMinimize: Iter:  24  G: -1760.888830264327908  |grad|_K:  4.106e-07  alpha:  2.703e-01  linmin: -2.079e-06  t[s]:  34162.09
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.109309
+	SubspaceRotationAdjust: set factor to 0.00984
+ElecMinimize: Iter:  25  G: -1760.888833492965887  |grad|_K:  2.552e-07  alpha:  4.312e-01  linmin:  1.864e-05  t[s]:  34545.39
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.109908
+	SubspaceRotationAdjust: set factor to 0.0101
+ElecMinimize: Iter:  26  G: -1760.888834776466183  |grad|_K:  1.805e-07  alpha:  4.438e-01  linmin:  1.172e-05  t[s]:  34930.24
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.109314
+	SubspaceRotationAdjust: set factor to 0.00881
+ElecMinimize: Iter:  27  G: -1760.888835276303325  |grad|_K:  1.447e-07  alpha:  3.453e-01  linmin: -2.966e-05  t[s]:  35315.86
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.109625
+	SubspaceRotationAdjust: set factor to 0.0106
+ElecMinimize: Iter:  28  G: -1760.888835631160646  |grad|_K:  1.043e-07  alpha:  3.825e-01  linmin:  9.393e-05  t[s]:  35706.35
+ElecMinimize: Converged (|Delta G|<7.277070e-07 for 2 iters).
+Setting wave functions to eigenvectors of Hamiltonian
+
+Electronic minimization # 4 changed total free energy by -2.666544e-04 at t[s]:  35722.56
+
+---------------------- Fluid Minimization # 5 -----------------------
+FluidMinimize: Iter:   0  G: -0.037244396034188  |grad|_K:  2.068e-04  alpha:  1.000e+00
+FluidMinimize: Iter:   1  G: -0.037244396034188  |grad|_K:  2.068e-04  alpha:  1.946e-31  linmin: -1.737e-01  cgtest:  1.000e+00  t[s]:  35723.39
+FluidMinimize: 	Step increased G by 8.326673e-17, reducing alpha to 1.946118e-32.
+FluidMinimize: 	Step increased G by 7.632783e-17, reducing alpha to 1.946118e-33.
+FluidMinimize: 	Step increased G by 7.632783e-17, reducing alpha to 1.946118e-34.
+FluidMinimize: 	Step increased G by 7.632783e-17, reducing alpha to 1.946118e-35.
+FluidMinimize: 	Step increased G by 7.632783e-17, reducing alpha to 1.946118e-36.
+FluidMinimize: 	Step increased G by 7.632783e-17, reducing alpha to 1.946118e-37.
+FluidMinimize: 	Step failed to reduce G after 6 attempts. Quitting step.
+FluidMinimize: 	Undoing step.
+FluidMinimize: 	Step failed: resetting search direction.
+FluidMinimize: Iter:   2  G: -0.037244396034188  |grad|_K:  2.068e-04  alpha:  1.946e-37
+FluidMinimize: Iter:   3  G: -0.037244396034188  |grad|_K:  2.068e-04  alpha:  1.946e-31  linmin: -1.737e-01  cgtest:  1.000e+00  t[s]:  35725.99
+FluidMinimize: Encountered beta<0, resetting CG.
+FluidMinimize: 	Step increased G by 6.938894e-18, reducing alpha to 1.946118e-32.
+FluidMinimize: 	Step increased G by 6.938894e-18, reducing alpha to 1.946118e-33.
+FluidMinimize: Iter:   4  G: -0.037244396034188  |grad|_K:  2.068e-04  alpha:  1.946e-33  linmin: -1.737e-01  cgtest:  1.000e+00  t[s]:  35727.05
+FluidMinimize: Iter:   5  G: -0.037244396034188  |grad|_K:  2.068e-04  alpha:  1.946e-31  linmin: -1.737e-01  cgtest:  1.000e+00  t[s]:  35727.59
+FluidMinimize: Encountered beta<0, resetting CG.
+FluidMinimize: Iter:   6  G: -0.037244396034188  |grad|_K:  2.068e-04  alpha:  1.946e-31  linmin: -1.737e-01  cgtest:  1.000e+00  t[s]:  35728.12
+FluidMinimize: Encountered beta<0, resetting CG.
+FluidMinimize: 	Step increased G by 1.387779e-17, reducing alpha to 1.946118e-32.
+FluidMinimize: 	Step increased G by 4.857226e-17, reducing alpha to 1.946118e-33.
+FluidMinimize: 	Step increased G by 4.857226e-17, reducing alpha to 1.946118e-34.
+FluidMinimize: 	Step increased G by 3.469447e-17, reducing alpha to 1.946118e-35.
+FluidMinimize: 	Step increased G by 4.857226e-17, reducing alpha to 1.946118e-36.
+FluidMinimize: 	Step increased G by 2.081668e-17, reducing alpha to 1.946118e-37.
+FluidMinimize: 	Step failed to reduce G after 6 attempts. Quitting step.
+FluidMinimize: 	Undoing step.
+FluidMinimize: 	Step failed along negative gradient direction.
+FluidMinimize: Probably at roundoff error limit. (Stopping)
+
+Fluid minimization # 5 changed total free energy by -6.938894e-18 at t[s]:  35730.52
+
+-------------------- Electronic Minimization # 5 ---------------------
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.044477
+ElecMinimize: Iter:   0  G: -1760.887204891160536  |grad|_K:  1.433e-05  alpha:  1.000e+00
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.097588
+	SubspaceRotationAdjust: set factor to 0.00579
+ElecMinimize: Iter:   1  G: -1760.888473215924705  |grad|_K:  3.454e-06  alpha:  1.478e-01  linmin:  4.528e-02  t[s]:  36278.75
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.096775
+	SubspaceRotationAdjust: set factor to 0.00754
+ElecMinimize: Iter:   2  G: -1760.888662553175436  |grad|_K:  1.530e-06  alpha:  3.771e-01  linmin:  1.317e-03  t[s]:  36660.41
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.103295
+	SubspaceRotationAdjust: set factor to 0.00786
+ElecMinimize: Iter:   3  G: -1760.888711421044718  |grad|_K:  1.103e-06  alpha:  4.706e-01  linmin: -8.557e-04  t[s]:  37045.69
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.102421
+	SubspaceRotationAdjust: set factor to 0.0087
+ElecMinimize: Iter:   4  G: -1760.888744710945730  |grad|_K:  1.068e-06  alpha:  6.144e-01  linmin:  4.852e-04  t[s]:  37430.35
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.107110
+	SubspaceRotationAdjust: set factor to 0.00824
+ElecMinimize: Iter:   5  G: -1760.888780518347858  |grad|_K:  1.068e-06  alpha:  7.081e-01  linmin: -5.513e-04  t[s]:  37816.96
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.105136
+	SubspaceRotationAdjust: set factor to 0.00677
+ElecMinimize: Iter:   6  G: -1760.888808669257969  |grad|_K:  8.942e-07  alpha:  5.521e-01  linmin:  1.103e-04  t[s]:  38201.01
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.108610
+	SubspaceRotationAdjust: set factor to 0.0045
+ElecMinimize: Iter:   7  G: -1760.888825530201757  |grad|_K:  5.656e-07  alpha:  4.751e-01  linmin: -1.107e-04  t[s]:  38589.19
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.106720
+	SubspaceRotationAdjust: set factor to 0.00308
+ElecMinimize: Iter:   8  G: -1760.888832162201425  |grad|_K:  3.249e-07  alpha:  4.661e-01  linmin:  2.222e-05  t[s]:  38975.76
+	FillingsUpdate:  mu: -0.173600000  nElectrons: 338.107313
+	SubspaceRotationAdjust: set factor to 0.0037
+ElecMinimize: Iter:   9  G: -1760.888834647460953  |grad|_K:  2.006e-07  alpha:  5.296e-01  linmin: -6.394e-05  t[s]:  39363.34
+ElecMinimize: Converged (|Delta G|<9.068740e-06 for 2 iters).
+Setting wave functions to eigenvectors of Hamiltonian
+
+Electronic minimization # 5 changed total free energy by 9.836997e-07 at t[s]:  39380.48
+
+Fluid<-->Electron self-consistency loop converged to 1.000000e-05 hartrees after 5 minimization pairs at t[s]:  39380.48.
+
+# Ionic positions in lattice coordinates:
+ion H   0.645688104109028   0.426427872801373   0.361946502149445 1
+ion H   0.492314149636896   0.840258336581769   0.361848824526299 1
+ion C   0.496824815700156   0.505975453463636   0.361919391513210 1
+ion O   0.245331594219677   0.361671317935350   0.362026348898080 1
+ion O   0.636927202392744   0.784646723619025   0.362116318251793 1
+ion Pt   0.333300000000000   0.166700000000000  -0.200100000000000 0
+ion Pt   0.333300000000000   0.666700000000000  -0.200100000000000 0
+ion Pt   0.833300000000000   0.166700000000000  -0.200100000000000 0
+ion Pt   0.833300000000000   0.666700000000000  -0.200100000000000 0
+ion Pt   0.000000000000000   0.000000000000000  -0.100000000000000 0
+ion Pt   0.000000000000000   0.500000000000000  -0.100000000000000 0
+ion Pt   0.500000000000000   0.000000000000000  -0.100000000000000 0
+ion Pt   0.500000000000000   0.500000000000000  -0.100000000000000 0
+ion Pt   0.166690907254758   0.333314827839511  -0.000083338305943 1
+ion Pt   0.166676077589475   0.833307928560103  -0.000084259630764 1
+ion Pt   0.666683477531807   0.333310481213499  -0.000047595980689 1
+ion Pt   0.666688160658059   0.833308254653238  -0.000064198802396 1
+ion Pt   0.333239430340588   0.166639394579248   0.099700805003771 1
+ion Pt   0.333287599594543   0.666661899839421   0.099697957765128 1
+ion Pt   0.833355429486937   0.166682826661436   0.099712912733230 1
+ion Pt   0.833344642812937   0.666714746804804   0.099712897356142 1
+ion Pt  -0.000002779942238   0.000052665501463   0.200143677143037 1
+ion Pt   0.000044869774352   0.499983932662140   0.200105444043616 1
+ion Pt   0.499990702335293  -0.000022653201989   0.200075215810662 1
+ion Pt   0.499957241324349   0.499981142118577   0.200092499305137 1
+
+
+# Forces in Lattice coordinates:
+force H  -0.011503482712593  -0.003581221184211  -0.015175869537060 1
+force H  -0.036345329021240   0.074718129171669  -0.037256156312301 1
+force C   0.089362495863882   0.010942285473540   0.009425690624945 1
+force O  -0.029298857287747  -0.011139264017788   0.066897727017374 1
+force O  -0.025077744170630  -0.058084893550288   0.039271128547695 1
+force Pt   0.000000878041734  -0.000000614327725   0.021481463422760 0
+force Pt   0.000036301222177  -0.000046610518735   0.021064494565758 0
+force Pt   0.000144847361219  -0.000073715418791   0.022729890026822 0
+force Pt   0.000064031803214  -0.000036813324535   0.021086056252999 0
+force Pt  -0.000178460669125   0.000064992085124   0.066445877707424 0
+force Pt  -0.000158926883014   0.000077693924526   0.069291221281397 0
+force Pt   0.000153093529093  -0.000006938279964   0.069105583722695 0
+force Pt   0.000159137058867  -0.000004378481123   0.065665967739350 0
+force Pt  -0.000224236120672  -0.000039289785806  -0.025648642896420 1
+force Pt  -0.000847550732089   0.000317786779775  -0.026384175232254 1
+force Pt  -0.000139283846734   0.000571499850244  -0.025524182576740 1
+force Pt   0.000483327901037  -0.000274879637412  -0.026156274711537 1
+force Pt  -0.000442178542346   0.000187418731535  -0.037409954049535 1
+force Pt   0.000503449325862  -0.000807105761613  -0.040253304762999 1
+force Pt   0.000742985801185  -0.000660104219137  -0.035818392785760 1
+force Pt  -0.000135670697989   0.000145184247608  -0.033974249721960 1
+force Pt  -0.000094860567474  -0.000935196391815  -0.115039358190805 1
+force Pt  -0.001079581075250   0.001418270191548  -0.120513987973482 1
+force Pt  -0.000312518189812   0.000018874061983  -0.116208352007519 1
+force Pt   0.001087496541124  -0.000238011947536  -0.087322133611180 1
+
+# Energy components:
+   A_diel =       -0.0367956220338324
+   Eewald =    26794.6067898831497587
+       EH =    28428.0710423404925677
+     Eloc =   -57363.9637159088451881
+      Enl =      -15.8112924341148631
+      Exc =     -575.8686915278842662
+ Exc_core =      324.9917248255447362
+       KE =      588.6692746127808959
+  MuShift =       -0.0044240352674192
+-------------------------------------
+     Etot =    -1819.3460878661796869
+       TS =        0.2381764028894194
+-------------------------------------
+        F =    -1819.5842642690690809
+      muN =      -58.6954296216080920
+-------------------------------------
+        G =    -1760.8888346474609534
+
+IonicMinimize: Iter:   0  G: -1760.888834647460953  |grad|_K:  2.348e-03  t[s]:  39426.19
+IonicMinimize: None of the convergence criteria satisfied after 0 iterations.
+
+#--- Lowdin population analysis ---
+# oxidation-state H +0.203 +0.463
+# oxidation-state C +0.440
+# oxidation-state O -0.396 -0.418
+# oxidation-state Pt +0.007 +0.007 +0.007 +0.008 +0.024 +0.023 +0.022 +0.023 +0.011 +0.011 +0.011 +0.011 +0.009 +0.006 +0.008 +0.015 -0.027 -0.038 -0.045 -0.046
+
+
+Dumping '111_4-Solvated.ionpos' ... done
+Dumping '111_4-Solvated.n' ... done
+Dumping '111_4-Solvated.eigStats' ... 
+	eMin: -2.125235 at state 0 ( [ +0.000000 +0.000000 +0.000000 ] spin 0 )
+	HOMO: -0.174083 at state 0 ( [ +0.000000 +0.000000 +0.000000 ] spin 0 )
+	mu  : -0.173600
+	LUMO: -0.173546 at state 5 ( [ +0.250000 +0.500000 +0.000000 ] spin 0 )
+	eMax: +0.376531 at state 2 ( [ +0.000000 +0.500000 +0.000000 ] spin 0 )
+	HOMO-LUMO gap: +0.000537
+	Optical gap  : +0.001308 at state 0 ( [ +0.000000 +0.000000 +0.000000 ] spin 0 )
+Dumping '111_4-Solvated.Ecomponents' ... done
+End date and time: Mon Apr 29 10:27:29 2019  (Duration: 0-10:58:01.46)
+Done!
