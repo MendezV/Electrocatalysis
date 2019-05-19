@@ -1,0 +1,22 @@
+For the 100 surface of bct (110 of the fct )
+First scaled the unit cell by two diag(2 2 2) (in edit-> unit cell -> remove symmetries-> transform)
+then rotated the a to the c axis with ((0,0,2),(0,2,0),(-2,0,0))  (this comes from the rotation matrix from 100 to 001 in rotation.py and the factor of two is a mystery(should have already been taken into account in the first scaling))
+then inserted the planes
+
+For the 110 surface of bct (100 of the fct)
+First started defining the unit cell as triclinic with strain applied in the a axis
+rotated the b and c axis with (100 011 0-11)
+initialized current matrix and then applied the scaling in the c direction
+
+
+For the 101 surface of bct (111 of the fct)
+First started defining the unit cell as triclinic with strain applied in the c axis
+rotated the a and c axis with (101 010 -101)
+initialized current matrix and then applied the scaling in the c direction
+
+
+red is zero strain
+green is 2.7740	2.7740	3.9230
+purple is 2.7202	2.7202	3.7172
+blue is 2.7445	2.7445	3.6510
+yellow is 2.7478	2.7478	3.6130
