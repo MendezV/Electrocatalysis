@@ -5,4 +5,4 @@ include ${surface}.ionpos
 dump-name ${surface}-Vacuum.$VAR
 dump End State Ecomponents ElecDensity EigStats IonicPositions
 
-ionic-minimize nIterations 5  #Uncomment to enable geometry optimization
+ionic-minimize nIterations 8  #Uncomment to enable geometry optimization

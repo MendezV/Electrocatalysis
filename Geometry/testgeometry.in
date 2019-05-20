@@ -1,0 +1,6 @@
+#Save the following to testGeometry.in
+include Ptslab.lattice   #we will use the same input file later for 110 and 111
+include Ptslab.ionpos
+coulomb-interaction Slab 001
+coulomb-truncation-embed 0 0 0
+ion-species GBRV/$ID_pbe.uspp

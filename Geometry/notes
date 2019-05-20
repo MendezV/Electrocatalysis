@@ -20,3 +20,16 @@ green is 2.7740	2.7740	3.9230
 purple is 2.7202	2.7202	3.7172
 blue is 2.7445	2.7445	3.6510
 yellow is 2.7478	2.7478	3.6130
+
+
+TO cleave surface
+first scale 1.5 to influde the fifth layer (search atoms to maintain lattice)
+(for 110 and 111 rotate xy vectors to with (1-10 110 001) to make slightly bigger surface so that molecules fit)
+then scale 2 and select do nothing to create vacuum
+then remove redundant atoms in structure params
+then remove by hand atoms that dont belong to the surface
+then shift by 0.166667 to recenter Slab
+then remove planes
+
+every surface should have different vaccuums, the same fractional coordinates
+different lattices and the same number of atoms (20)

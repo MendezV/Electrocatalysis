@@ -1,0 +1,7 @@
+#Save the following to testGeometry.in
+include Strain1_111.lattice   #we will use the same input file later for 110 and 111
+include Strain1_111_1.ionpos
+#coulomb-interaction Slab 001
+#coulomb-truncation-embed 0 0 0
+ion-species GBRV/$ID_pbe.uspp
+core-overlap-check None

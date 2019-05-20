@@ -1,0 +1,171 @@
+
+*************** JDFTx 1.4.2  ***************
+
+Start date and time: Sun May 19 14:54:35 2019
+Executable jdftx with command-line: -ni testGeometry.in
+Running on hosts (process indices):  Juans-MBP.lan1 (0)
+Divided in process groups (process indices):  0 (0)
+Resource initialization completed at t[s]:      0.00
+Run totals: 1 processes, 12 threads, 0 GPUs
+
+
+Input parsed successfully to the following command list (including defaults):
+
+basis kpoint-dependent
+coords-type Cartesian
+core-overlap-check vector
+coulomb-interaction Slab 001
+coulomb-truncation-embed 0 0 0
+davidson-band-ratio 1.1
+dump End State
+dump-name $INPUT.$VAR
+elec-cutoff 20
+elec-eigen-algo Davidson
+elec-ex-corr gga-PBE
+electronic-minimize  \
+	dirUpdateScheme      FletcherReeves \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-08 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+exchange-regularization WignerSeitzTruncated
+fluid None
+fluid-ex-corr lda-TF lda-PZ
+fluid-gummel-loop 10 1.000000e-05
+fluid-minimize  \
+	dirUpdateScheme      PolakRibiere \
+	linminMethod         DirUpdateRecommended \
+	nIterations          100 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  0 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+fluid-solvent H2O 55.338 ScalarEOS \
+	epsBulk 78.4 \
+	pMol 0.92466 \
+	epsInf 1.77 \
+	Pvap 1.06736e-10 \
+	sigmaBulk 4.62e-05 \
+	Rvdw 2.61727 \
+	Res 1.42
+forces-output-coords Positions
+ion Pt   0.000000000000000   0.000000000000000   0.000000000000000 0
+ion Pt   0.000000000000000   0.000000000000000  10.628197889100289 1
+ion Pt   0.000000000000000  10.628197889100289   0.000000000000000 1
+ion Pt   0.000000000000000  10.628197889100289  10.628197889100289 1
+ion Pt  15.030881904964914   0.000000000000000   0.000000000000000 1
+ion Pt  15.030881904964914   0.000000000000000  10.628197889100289 1
+ion Pt  15.030881904964914  10.628197889100289   0.000000000000000 1
+ion Pt  15.030881904964914  10.628197889100289  10.628197889100289 1
+ion Pt   0.000000000000000   5.314098944550144   0.000000000000000 1
+ion Pt   0.000000000000000   5.314098944550144  10.628197889100289 1
+ion Pt  15.030881904964914   5.314098944550144   0.000000000000000 1
+ion Pt  15.030881904964914   5.314098944550144  10.628197889100289 1
+ion Pt   7.515440952482457   0.000000000000000   0.000000000000000 1
+ion Pt   7.515440952482457   0.000000000000000  10.628197889100289 1
+ion Pt   7.515440952482457  10.628197889100289   0.000000000000000 1
+ion Pt   7.515440952482457  10.628197889100289  10.628197889100289 1
+ion Pt   7.515440952482457   5.314098944550144   0.000000000000000 1
+ion Pt   7.515440952482457   5.314098944550144  10.628197889100289 1
+ion Pt   0.000000000000000   0.000000000000000   5.314098944550144 1
+ion Pt   0.000000000000000  10.628197889100289   5.314098944550144 1
+ion Pt  15.030881904964914   0.000000000000000   5.314098944550144 1
+ion Pt  15.030881904964914  10.628197889100289   5.314098944550144 1
+ion Pt   0.000000000000000   5.314098944550144   5.314098944550144 1
+ion Pt  15.030881904964914   5.314098944550144   5.314098944550144 1
+ion Pt   7.515440952482457   0.000000000000000   5.314098944550144 1
+ion Pt   7.515440952482457  10.628197889100289   5.314098944550144 1
+ion Pt   7.515440952482457   5.314098944550144   5.314098944550144 1
+ion Pt   3.757720476241230   2.657049472275073   2.657049472275073 1
+ion Pt   3.757720476241230   7.971148416825216   2.657049472275073 1
+ion Pt  11.273161428723688   2.657049472275073   2.657049472275073 1
+ion Pt  11.273161428723688   7.971148416825216   2.657049472275073 1
+ion Pt   3.757720476241230   2.657049472275073   7.971148416825216 1
+ion Pt   3.757720476241230   7.971148416825216   7.971148416825216 1
+ion Pt  11.273161428723688   2.657049472275073   7.971148416825216 1
+ion Pt  11.273161428723688   7.971148416825216   7.971148416825216 1
+ion C   6.545822457959263   5.312965108852008  13.942588607370086 1
+ion O   8.184592986999442   5.314476889782857  15.530714475226828 1
+ion H   4.582963891868357   5.319579150424471  14.501758579167813 1
+ion-species GBRV/$ID_pbe.uspp
+ion-width 0
+ionic-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0.0001 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+kpoint   0.000000000000   0.000000000000   0.000000000000  1.00000000000000
+kpoint-folding 1 1 1 
+latt-move-scale 1 1 1
+latt-scale 1 1 1 
+lattice  \
+	  15.030881904964914    0.000000000000000    0.000000000000000  \
+	   0.000000000000000   10.628197889100287    0.000000000000000  \
+	   0.000000000000000    0.000000000000000   31.061399999999999 
+lattice-minimize  \
+	dirUpdateScheme      L-BFGS \
+	linminMethod         DirUpdateRecommended \
+	nIterations          0 \
+	history              15 \
+	knormThreshold       0 \
+	energyDiffThreshold  1e-06 \
+	nEnergyDiff          2 \
+	alphaTstart          1 \
+	alphaTmin            1e-10 \
+	updateTestStepSize   yes \
+	alphaTreduceFactor   0.1 \
+	alphaTincreaseFactor 3 \
+	nAlphaAdjustMax      3 \
+	wolfeEnergy          0.0001 \
+	wolfeGradient        0.9 \
+	fdTest               no
+lcao-params -1 1e-06 0.001
+pcm-variant GLSSA13
+spintype no-spin
+subspace-rotation-factor 1 yes
+symmetries automatic
+symmetry-threshold 0.0001
+
+
+
+---------- Setting up symmetries ----------
+
+Found 8 point-group symmetries of the bravais lattice
+Found 1 space-group symmetries with basis
+
+Species Pt atoms 2 and 0 are related by symmetry but have different move scale factors or inconsistent move constraints.
+
+End date and time: Sun May 19 14:54:35 2019  (Duration: 0-0:00:00.01)
+Failed.

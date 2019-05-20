@@ -1,0 +1,9 @@
+#Save the following to testGeometry.in
+include Ptslab.lattice   #we will use the same input file later for 110 and 111
+include Ptslab.ionpos
+coords-type cartesian
+coulomb-interaction Slab 001
+coulomb-truncation-embed 0 0 0
+ion-species GBRV/$ID_pbe.uspp
+#Not a real calculation; missing kpoints and fillings!
+core-overlap-check None

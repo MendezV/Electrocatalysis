@@ -1,10 +1,13 @@
 import numpy as np
 from numpy import linalg as la
 
-
+C=np.array([1.75390 ,-0.51310, -0.00060])
+Pt=np.array([-0.33130,  0.01060 , 0.00000])
+v=C-Pt
+v=v/np.sqrt(np.sum(v**2))
 ###script that generates the rotation matrix that aligns a to b (a moves to align with b)
-b=np.mat([1,0,1])/np.sqrt(2)
-a=np.mat([ 0 ,  0 , 1])
+a=np.mat([1,0,0])
+b=np.mat(v)
 a=a/np.sqrt(np.dot(a,a.T))
 c=np.dot(a,b.T)
 v=np.cross(a,b)[0]
