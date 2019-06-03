@@ -1,0 +1,55 @@
+--------------------------------------------------------------------------
+Initialization of PSM library failed.
+
+  Error: PSM is in the finalized state
+--------------------------------------------------------------------------
+
+*************** JDFTx 1.4.2 (git hash 74b6e54) ***************
+
+Start date and time: Sun May 26 00:19:11 2019
+Executable /home/jfm343/JDFTXDIR/build/jdftx with command-line: -i Vacuum.in
+Running on hosts (process indices):  node2014.physics.cornell.edu (0)
+Divided in process groups (process indices):  0 (0)
+Resource initialization completed at t[s]:      0.00
+Run totals: 1 processes, 12 threads, 0 GPUs
+
+
+Encountered 2 errors while parsing input:
+
+'117.998' is not a valid command.
+
+Command 'lattice'  with command line:
+	lattice Triclinic  10.06968331  10.06968331  51.78805254  76.21949    103.780518 
+failed with message:
+	Parameter <gamma> must be specified.
+The correct usage of this command is described below:
+	lattice  [<modification>] <lattice> <parameters...>
+	| \
+	<R00> <R01> <R02> \
+	<R10> <R11> <R12> \
+	<R20> <R21> <R22>
+Specify lattice by name and parameters, or explicitly using lattice vectors.
+
+The options for the first syntax ([<modification>] <lattice> <parameters...> scheme) are:
++ Triclinic <a> <b> <c> <alpha> <beta> <gamma>
++ [Base-Centered] Monoclinic <a> <b> <c> <beta>
++ [Base|Body|Face-Centered] Orthorhombic <a> <b> <c>
++ [Body-Centered] Tetragonal <a> <c>
++ Rhombohedral <a> <alpha>
++ Hexagonal <a> <c>
++ [Body|Face-Centered] Cubic <a>
+where lengths <a>,<b>,<c> are in bohrs and angles <alpha>,<beta,<gamma> are in degrees.
+
+Alternately, the second syntax directly specifies the transformation
+matrix from lattice to Cartesian coordinates. Therefore, the columns
+of this 3x3 matrix are the lattice vectors in bohrs.
+
+NOTE: other DFT codes may specify lattice vectors in rows;
+confirm that you switch them to columns if porting an input file to JDFTx.
+
+
+
+Input parsing failed with 2 errors (run with -t for command syntax)
+
+End date and time: Sun May 26 00:19:11 2019  (Duration: 0-0:00:00.01)
+Failed.
