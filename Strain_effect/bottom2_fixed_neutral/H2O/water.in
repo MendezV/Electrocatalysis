@@ -1,0 +1,24 @@
+include water.lattice
+include water.ionpos
+coords-type cartesian
+
+#coulomb-interaction Isolated
+#coulomb-truncation-embed 0 0 0
+
+ion-species GBRV/$ID_pbe.uspp
+elec-cutoff 20 100
+
+dump-name water.$VAR    #Filename pattern for saving outputs
+dump End State Ecomponents          #Output State i.e. everything needed to resume the calculation
+
+fluid NonlinearPCM
+pcm-variant GLSSA13
+fluid-solvent H2O
+fluid-cation Na+ 0.2
+fluid-anion ClO4- 0.2
+
+#initial-state water.$VAR    #Filename pattern to search for initial state
+#ionic-minimize \
+#    nIterations 10 \
+#    energyDiffThreshold 1e-6 \
+#    knormThreshold 1e-4  #Threshold on RMS cartesian force

@@ -1,0 +1,10 @@
+
+*************** JDFTx 1.4.2  ***************
+
+Start date and time: Thu Jun 13 15:06:35 2019
+Executable jdftx with command-line: -i Solvated.in
+Running on hosts (process indices):  dhcp-ccc-1825.eduroam.cornell.edu (0)
+Divided in process groups (process indices):  0 (0)
+Resource initialization completed at t[s]:      0.00
+Run totals: 1 processes, 12 threads, 0 GPUs
+Could not open file '100_1-Vacuum.ionpos' for reading.
